@@ -41,7 +41,7 @@ const HomeAbout: React.FC = () => {
         </p>
 
         {/* Link for navigation */}
-        <Link href="/About">
+        <Link href="/components/About/">
           <button className={styles.webaboutknowmorebtn}>Know More</button>
         </Link>
       </div>
