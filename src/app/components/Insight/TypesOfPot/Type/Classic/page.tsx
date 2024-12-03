@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import styles from './Russet.module.css'; // Import CSS module
+import styles from './russet.module.css'; // Import CSS module
 import Footer from '../../../../../Footer/Footer';
 import Navbar from '../../../../../Navbar/NavbarTYP'; // Update path as per your structure
 
