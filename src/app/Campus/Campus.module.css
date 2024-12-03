@@ -1,0 +1,107 @@
+.campus {
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+    overflow: hidden; /* Hide overflow for animation effect */
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    animation: scroll 20s linear infinite; /* Add animation to the gallery */
+    gap: 10px; /* Ensure space between the images */
+    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+}
+
+/* Gallery image styling */
+.gallery img {
+    width: 24%;
+    height: 200px; /* Maintain aspect ratio */
+    max-height: 200px; /* Set maximum height */
+    border-radius: 14px;
+    margin-right: 10px; /* Add spacing between images */
+}
+.knowMoreBtn {
+    display: inline-block;
+    background: linear-gradient(135deg,  #04D939,#001542);
+    color: #fff;
+    padding: 15px 40px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  }
+  
+  .knowMoreBtn:hover {
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+/* Media query for smaller screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .potatoInsightsContainer {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+
+    .contentContainer {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+
+    .contentBox {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+
+    .contentTitle {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+
+    .contentText {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+
+    
+
+    /* Keep the gallery scroll animation and ensure it works on mobile */
+    .gallery {
+        flex-wrap: nowrap; /* Prevent wrapping and keep images in a single line */
+        justify-content: start; /* Align images to the start */
+        animation: scroll 10s linear infinite; /* Ensure the animation stays */
+    }
+
+    .gallery img {
+        width: 40%; /* Adjust image width to fit better on mobile */
+        max-height: 150px; /* Adjust maximum height for smaller screens */
+        margin-right: 10px; /* Add spacing between images */
+    }
+}
+
+/* Media query for screens between 768px and 800px */
+@media (max-width: 800px) {
+    .gallery {
+        flex-wrap: nowrap; /* Keep images in a single line for scrolling effect */
+        justify-content: start;
+    }
+
+    .gallery img {
+        width: 50%; /* Set width to 40% to fit images properly */
+        max-height: 150px; /* Adjust height for smaller screens */
+        margin-bottom: 0px; /* Add margin for spacing */
+    }
+}
+
+/* Keyframe animation for scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move left by 100% of its width */
+    }
+}

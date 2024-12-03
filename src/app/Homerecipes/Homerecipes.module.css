@@ -1,0 +1,109 @@
+/* Container for the images */
+
+
+.potatoTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: black;
+  position: relative; /* Required for positioning the pseudo-element */
+  display: inline-block; /* Ensures the underline affects only the text width */
+}
+
+.potatoTitle::after {
+  content: '';
+  position: absolute;
+  left: 0%; /* Start the underline from the middle */
+  bottom: -4px; /* Position it just below the text */
+  width: 50%; /* Underline only the second half */
+  height: 3px; /* Thickness of the underline */
+  border-bottom: 5px dotted brown; /* Dotted underline */
+
+}
+
+
+
+.webrecImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  
+
+  .webrecImage {
+    position: relative;
+    flex: 1 1 27%; /* For larger screens: 4 images per row */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure images inside do not overflow */
+  }
+  
+ 
+  /* Image styling */
+.webrecImage img {
+    width: 100%;
+    height: 38vh; /* Adjust height for consistency */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Overlay styling */
+.imageOverlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 14px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start with the overlay hidden */
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensure overlay appears on top of the image */
+  }
+  
+  /* On hover, make the overlay visible */
+  .webrecImage:hover .imageOverlay {
+    opacity: 1;
+  }
+  
+  /* Mobile-specific styling */
+  @media (max-width: 768px) {
+    /* Adjust the layout to show two images per row on small screens */
+    .webrecImage {
+      flex: 1 1 48%; /* Makes each image take 48% of the row */
+      max-width: 48%;
+      margin-bottom: 10px;
+    }
+  
+    /* Adjust image height for smaller screens */
+    .webrecImage img {
+      height: 25vh; /* Adjusts image height for mobile */
+    }
+  }
+  
+  /* Button styling inside the overlay */
+  .viewRecipeButton {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(135deg,  #04D939,#001542);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button hover effect */
+  .viewRecipeButton:hover {
+    /* background-color: #B97B2A; */
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
+  }
+  

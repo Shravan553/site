@@ -1,0 +1,282 @@
+
+.headerTitle3 {
+    color: #8B4513;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.headerTitle3 ::after{
+    content: '';
+    position: absolute;
+    left: 50%; /* Start the underline further to the right, after some space */
+    transform: translateX(-50%); /* Center the underline horizontally from its starting point */
+    bottom: -10px; /* Move the underline a little below the text */
+    width: 10%; /* Adjust this to control the length of the underline */
+    height: 5px; /* Height of the underline area */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+}
+.headerSubtitle3 {
+    font-size: 1.2rem;
+    color: #5b3a29;
+    margin-top: 0;
+    text-align: center;
+}
+.testimonialsSection {
+    background-color: #8B4513; /* Brown background */
+    padding: 40px 20px;
+  }
+  
+  .testimonialContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonialImage {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .testimonialImg {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .testimonialContent {
+    flex: 2;
+    padding-left: 20px;
+  }
+  
+  .testimonialTitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .testimonialText {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .testimonialButton {
+    padding: 10px 20px;
+    background-color: #A48650;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .testimonialButton:hover {
+    background-color: #8f6a3e;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonialContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonialImage {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .testimonialContent {
+      padding-left: 0;
+    }
+  
+    .testimonialTitle {
+      font-size: 1.5rem;
+    }
+  
+    .testimonialText {
+      font-size: 1rem;
+    }
+  
+    .testimonialButton {
+      font-size: 1rem;
+    }
+  }
+  
+/* Product Information Section */
+.productInfo3 {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center; /* Center the content horizontally */
+    margin: 30px auto; /* Reduce margin */
+    max-width: 800px; /* Set a smaller max-width */
+    padding: 15px; /* Reduce padding */
+    background-color: #b9917e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px; /* Adjust spacing between items */
+    flex-wrap: nowrap; /* Ensure items are side-by-side */
+}
+
+.productImage3 {
+    max-width: 300px; /* Maintain consistent size for the image */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.productDetails3 {
+    flex: 1; /* Take remaining space beside the image */
+    max-width: 500px; /* Limit width of the details */
+    text-align: left; /* Align text to the left */
+}
+
+.productDetails3 h2 {
+    font-size: 1.8rem;
+    color: #8b4513;
+    margin-bottom: 15px;
+}
+
+.productDetails3 p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Section Titles */
+.sectionTitle3 {
+    font-size: 2rem;
+    margin: 30px 0 15px;
+    color: #8b4513;
+    text-align: center;
+}
+
+/* Nutritional Facts Section */
+.nutritionInfo3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.nutrient3 {
+    background-color: #e0f7fa;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Benefits List */
+.benefitsList3 {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove default padding */
+    margin: 20px auto;
+    max-width: 600px; /* Constrain the width for readability */
+    font-size: 1rem;
+    line-height: 1.8; /* Improve line spacing */
+    text-align: center; /* Align text to the left for better readability */
+}
+
+.benefitsList3 li {
+    position: relative; /* For custom bullet positioning */
+    margin-bottom: 15px; /* Add spacing between items */
+    padding-left: 25px; /* Space for custom bullet */
+    color: #4b3832; /* Enhance text color */
+    font-weight: 500; /* Slightly bold text for better visibility */
+}
+
+.benefitsList3 li::before {
+    position: absolute;
+    left: 0;
+    right: 2px; /* Position the checkmark to the left of the text */
+    top: 0;
+    color: #8b4513; /* Set bullet color */
+    font-size: 1.2rem; /* Make the bullet slightly larger */
+}
+
+.benefitsList3 li:hover {
+    color: #b9917e; /* Change text color on hover */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Recipes Section */
+.recipes3 {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff3e0;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.recipes3 h3 {
+    margin: 10px 0;
+    color: #8b4513;
+    font-size: 1.6rem; /* Adjusted for mobile */
+}
+
+.recipes3 p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #5b3a29;
+}
+
+/* Footer Section */
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .productInfo3 {
+        flex-direction: column;
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .headerTitle3 {
+        font-size: 2rem;
+    }
+
+    .productImage3 {
+        margin-bottom: 15px;
+    }
+
+    .productDetails3 p {
+        font-size: 1rem;
+    }
+
+    .sectionTitle3 {
+        font-size: 1.8rem;
+    }
+
+    .nutritionInfo3 {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 10px;
+    }
+
+    .nutrient3 {
+        min-width: 100%;
+    }
+
+    .recipes3 h3 {
+        font-size: 1.4rem;
+    }
+
+    .benefitList-3 {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+}

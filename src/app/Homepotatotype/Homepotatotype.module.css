@@ -1,0 +1,194 @@
+/* General Styling */
+.about {
+  height: 100vh; /* Full viewport height */
+  width: auto; /* Full viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf9f7;
+  padding: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  opacity: 0; /* Start hidden */
+  transform: translateY(60px); /* Start below the viewport */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth scroll effect */
+}
+
+.about.visible {
+ 
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+}
+/* Left Section Animation */
+.aboutLeft {
+  flex-basis: 45%;
+  position: relative;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(60px); /* Start below the viewport */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out 0.2s; /* Delayed animation */
+}
+
+.aboutLeft.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move into view */
+}
+
+/* Right Section Animation */
+.aboutRight {
+  flex-basis: 50%;
+  padding-left: 30px;
+  color: #2C3E50;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(60px); /* Start below the viewport */
+  transition: opacity 1s ease-out, transform 1s ease-out 0.4s; /* Slightly more delay */
+}
+
+.aboutRight.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move into view */
+}
+
+/* Image Styling */
+.aboutImg {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Softer pop-out shadow */
+  transition: transform 0.4s ease;
+}
+
+.aboutImg:hover {
+  transform: scale(1.08); /* Slight zoom on hover */
+}
+
+/* Play Icon */
+.playIcon {
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.playIcon:hover {
+  opacity: 1;
+}
+
+.about h3 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #060707;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 15px;
+  position: relative; /* Required for positioning the pseudo-element */
+  display: inline-block; /* Ensures the underline only affects the width of the text */
+}
+
+.about h3::after {
+  content: '';
+  position: absolute;
+  left: 0%; /* Start the underline from the middle */
+  bottom: -5px; /* Position it just below the text */
+  width: 50%; /* Underline only the second half */
+  height: 3px; /* Thickness of the underline */
+  border-bottom: 5px dotted brown; /* Dotted underline */
+
+}
+
+
+.about h2 {
+  font-size: 36px;
+  color: #03560b;
+  margin: 25px 0;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 500px;
+}
+
+.about p {
+  color: #000a0a;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Know More Button */
+.knowMoreBtn {
+  display: inline-block;
+  color: #fff;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 40px; /* Rounder button style */
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(135deg,  #04D939,#001542);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.knowMoreBtn:hover {
+
+  background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Container Layout */
+  .about {
+    flex-direction: column;
+    padding: 20px; /* Reduced padding */
+    text-align: center;
+    height: fit-content;
+    align-items: center; /* Center content */
+  }
+
+  /* Adjust sections */
+  .aboutLeft, 
+  .aboutRight {
+    flex-basis: 100%; /* Full width on mobile */
+    padding: 0;
+  }
+
+  .aboutRight h3 {
+    font-size: 16px; /* Adjusted for better readability */
+    letter-spacing: 1px; /* Slightly reduced letter-spacing */
+  }
+
+  .about h2 {
+    font-size: 12px; /* Adjusted font size for mobile */
+    max-width: 90%; /* Make it more flexible on small screens */
+  }
+
+  .about p {
+    font-size: 9px; /* Adjusted font size for mobile */
+    line-height: 1.6; /* Slightly reduced line height for mobile */
+    margin-bottom: 0px; /* Adjust spacing */
+    text-align: left; /* Align text to left for better readability */
+  }
+
+  /* Know More Button */
+  .knowMoreBtn{
+    font-size: 1em; /* Adjusted button font size */
+    padding: 10px 30px; /* Adjusted padding */
+  }
+
+  /* Image Styles */
+  .aboutImg {
+    max-width: 100%; /* Ensure the image is smaller on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+}

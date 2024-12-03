@@ -1,0 +1,236 @@
+.frirecipePageContainer {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .friheroSection {
+    position: relative;
+  }
+  
+  .friheroImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .friingredientGrid p{
+    color: white;
+  }
+  
+  .frivideoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+    background: #dbc7c7;
+  }
+  
+  .frirecipeVideo {
+    width: 50%;
+    max-width: 600px;
+    border: 5px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .frivideoDescription {
+    max-width: 600px;
+    margin-left: 20px;
+    text-align: center;
+    color: rgb(7, 5, 5);
+  }
+  
+  .friingredientsSection {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  .friingredientCard:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    border-color: #ffd700; /* Optional: Highlight border color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .friingredientGrid {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center;
+    gap: 20px; /* Adds spacing between cards */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if necessary */
+  }
+  
+  .friingredientCard {
+    background: rgb(0, 0, 0); /* Dark background for the card */
+    border: 1px solid #e0e0e0; /* Light border for contrast */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    width: 150px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Even spacing between items */
+    align-items: center; /* Center-align items */
+    margin: 10px; /* Spacing between cards */
+  }
+  
+  
+  .friingredientImg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .fristepsSection {
+    padding: 40px 20px;
+  }
+  
+  .fristepsSection ol {
+    list-style-type: decimal;
+    margin: 0;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .friingredientCard:hover .friingredientImg {
+    transform: scale(1.1); /* Slight zoom effect on the image */
+    transition: transform 0.3s ease; /* Smooth transition for zoom */
+  }
+  
+  .fristepsSection li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+
+  .friNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    z-index: 100;
+    color: white;
+  }
+  .friNavTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .friNavList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    justify-content: space-evenly; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+  }
+  .friNavItem {
+    margin: 0 10px; /* Space between items */
+    padding: 10px 20px;
+    font-size: 16px; /* Adjusted font size */
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background-color: #A48650;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent text wrapping inside the items */
+  }
+  .friNavItem:hover {
+    background-color: #04D939;
+  }
+  .friNavItem:active {
+    background-color: #04D939;
+  }
+  /* Responsive Styling for Mobile View */
+  @media (max-width: 768px) {
+  
+   
+    .friingredientCard:hover .friingredientImg {
+        transform: scale(1.1); /* Slight zoom effect on the image */
+        transition: transform 0.3s ease; /* Smooth transition for zoom */
+      }
+   
+  
+    .friheroHeading {
+      font-size: 2rem; /* Reduce font size for mobile */
+    }
+    .friNav {
+      flex-direction: column; /* Title and list stack vertically */
+      align-items: flex-start; /* Align items to the start */
+      padding: 10px;
+    }
+    .friNavTitle {
+      font-size: 20px; /* Slightly smaller title font */
+      margin-bottom: 10px; /* Space below title */
+    }
+    .friNavList {
+      flex-wrap: nowrap; /* Keep items in a single row */
+      overflow-x: auto; /* Add horizontal scrolling if content overflows */
+      width: 100%; /* Full width for list */
+      justify-content: flex-start; /* Align items to the left */
+      padding-bottom: 5px; /* Space below for scroll */
+    }
+    .ffriNavItem {
+      margin: 0 5px; /* Reduce spacing for mobile view */
+      padding: 8px 15px; /* Adjust padding for smaller buttons */
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+    
+    .friingredientCard:hover {
+        transform: translateY(-10px); /* Slight lift effect */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+        border-color: #ffd700; /* Optional: Highlight border color on hover */
+        cursor: pointer; /* Change cursor to pointer */
+      }
+    .frivideoSection {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        
+      }
+      .frirecipeVideo{
+        width: fit-content;
+      }
+    /* Ingredients Section */
+    .friingredientsSection {
+      padding: 40px 10px;
+    }
+  
+    .friingredientGrid {
+      flex-direction: column; /* Stack ingredients vertically */
+      gap: 15px;
+    }
+  
+    .friingredientCard {
+      width: 100%; /* Full width for mobile */
+      padding: 15px;
+    }
+  
+    .friingredientImg {
+      width: 70px;
+      height: 70px;
+    }
+  
+    /* Steps Section */
+    .fristepsSection {
+      padding: 40px 10px;
+    }
+  
+    .fristepsSection ol {
+      font-size: 1rem;
+      padding: 0 15px;
+    }
+  
+    .fristepsSection li {
+      font-size: 0.1rem;
+    }
+  }
+  

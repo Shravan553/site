@@ -1,0 +1,698 @@
+.supplyChainWrapper {
+    font-family: Arial, sans-serif;
+  }
+    .supplyChainHeader {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* Add black overlay using ::before */
+  .supplyChainHeader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay with 50% opacity */
+    z-index: 1; /* Keep the overlay above the image */
+  }
+  
+  .headerImages {
+    width: 100%;
+    height: 600px;
+  }
+  
+  
+  .landscapeImageWrapper {
+    position: relative; /* Ensure that the image container is positioned correctly */
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .landscapeImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-top: 8px solid #04D939; /* Top border with golden color */
+    border-bottom: 8px solid #04D939; /* Bottom border with golden color */
+    border-left: 8px solid transparent; /* Transparent left border */
+    border-right: 8px solid transparent; /* Transparent right border */
+    border-radius: 8px; /* Optional: rounded corners */
+  }
+  .contactButton {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 15px 25px;
+    border: 2px solid #04D939;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50px; /* Makes the button look like a pill */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contactButton:hover {
+    background-color: #04D939;
+    color: white;
+  }
+  .landscapeImageWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px; /* Overlapping to the right */
+    width: 16px; /* Width of the overlap */
+    height: 100%;
+    background-color: #04D939; /* Golden color to match the border */
+    border-radius: 8px; /* Optional: rounded corners for the overlapping part */
+  }
+  
+  .landscapeImageWrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px; /* Overlapping to the left */
+    width: 16px; /* Width of the overlap */
+    height: 100%;
+    background-color: #04D939; /* Golden color to match the border */
+    border-radius: 8px; /* Optional: rounded corners for the overlapping part */
+  }
+  .headerTitles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3.5rem; /* Slightly increased title size */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 2; /* Ensure the title appears above the overlay */
+
+  }
+ 
+  .supplyChainMeaning {
+    padding: 40px 0;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 20px;
+  }
+  
+  .supplyChainMeaning h2 {
+    font-size: 2.5rem;
+    color: #5A3D1B; /* Dark brown heading */
+    margin-bottom: 10px;
+    position: relative; /* Required for positioning the ::after element */
+    display: inline-block; /* Ensure the element's width wraps its content */
+  }
+  
+  .supplyChainMeaning h2::after {
+    content: ''; /* Empty content to create the underline */
+    position: absolute;
+    bottom: 0; /* Align the underline with the bottom of the text */
+    left: 0; /* Start the underline from the beginning */
+    width: 50%; /* Cover half of the text */
+    height: 2px; /* Thickness of the underline */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+
+  }
+  
+  
+  
+  .supplyChainMeaning p {
+    font-size: 1.2rem;
+    color: #333; /* Standard text color */
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .supplyChainMeaning strong {
+    color: #D28F2C; /* Golden color for important text */
+  }
+  
+
+  /* StatisticsSection.css */
+  .statisticsSection {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .statsContainer {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statBox {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .statIcon {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #4CAF50;
+  }
+
+  .statBox p{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #f58353;
+  }
+  
+
+.agpotatoInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  /* Shared styling for both info boxes */
+  .infoBox {
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align:center;
+  }
+  
+  /* Specific styling for the mission box */
+  .missionBox {
+    background-color: #5a6f52; /* Light green background for sustainability */
+    color: #ffffff; /* Darker green text */
+  }
+  
+  /* Specific styling for the opportunities box */
+  .opportunitiesBox {
+    background-color: #581a1a; /* Light blue background for business opportunities */
+    color: #ffffff;
+  }
+  .csSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px; /* Increased padding for more space */
+    background-color: #F1F1F1; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Space above and below the section */
+  }
+  
+  .csImage {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the image */
+    margin-right: 40px; /* Space between image and text */
+  }
+  
+  .csImage img {
+    width: 700px; /* Set a fixed width */
+    height: 350px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .csImage img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker and larger shadow on hover */
+  }
+
+  
+ 
+
+ 
+  
+ 
+  
+ 
+  
+ 
+ 
+ 
+  /* Quality testing and supply information section */
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  .csContent {
+    flex: 1;
+  }
+  
+  /* Initial Style */
+/* Initial Style */
+.csContent h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #A48650;
+  position: relative; /* Required for positioning the ::after element */
+  display: inline-block; /* Ensures the width wraps the content */
+  transition: color 0.3s ease;
+}
+
+/* Add underline for half the text */
+.csContent h2::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  bottom: -5px; /* Adjust position to align below the text */
+  left: 0; /* Start from the left of the text */
+  width: 50%; /* Underline half the text */
+  height: 2px; /* Thickness of the underline */
+  border-bottom: 5px dotted brown; /* Dotted underline */
+
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect */
+.csContent h2:hover {
+  color: #001542; /* Gold color */
+  animation: bounce 0.6s ease-in-out; /* Apply bounce animation */
+}
+
+
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+  
+  .csContent p {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.8; /* Increased line spacing for readability */
+    color: #555; /* Softer dark grey color for text */
+    font-size: 1.25em; /* Slightly larger font size for better readability */
+    letter-spacing: 0.5px; /* Add slight letter spacing for a more elegant feel */
+    text-align: justify; /* Justify text for a more balanced look */
+    background-color: #f5e9e9; /* Subtle background color for a soft contrast */
+    padding: 10px 15px; /* Add padding for spacing around text */
+    border-radius: 8px; /* Rounded corners for a soft appearance */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.csContent p:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    background-color: #f0f0f0; /* Change background on hover */
+}
+
+  
+  .csContent ul {
+    margin-top: 15px; /* Space above the list */
+    padding-left: 20px; /* Indent for bullet points */
+  }
+  
+  .csContent li {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1em; /* Bullet point font size */
+    color: #333; /* Text color */
+    margin-bottom: 8px; /* Space between bullet points */
+  }
+  
+  /* General Mobile Adjustments */
+  @media (max-width: 768px) {
+    .supplyChainMeaning {
+      padding: 20px 10px;
+    }
+    .supplyChainMeaning h2 {
+      font-size: 1.8rem;
+    }
+    .supplyChainMeaning p {
+      font-size: 1rem;
+      padding: 0 15px;
+    }
+  
+    .headerImages {
+      height: 300px;
+    }
+  
+    .headerTitles {
+      font-size: 3rem;
+    }
+    .statsContainer {
+     width: 10px;
+    }
+    .statisticsSection {
+      /* padding: 20px; */
+      display: flex; /* Enable flex layout */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center align items */
+      /* gap: 15px;  */
+      height:450px;
+      width: 400px;/* Add space between icons */
+  }
+    /* Content section */
+    .supplyChainContent {
+      padding: 20px;
+    }
+    .supplyChainContent h2 {
+      font-size: 1.6rem;
+    }
+  
+    /* Supply Chain Quality Section */
+    .supplyChainQuality {
+      padding: 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 20px auto;
+    }
+  
+    /* Statistics Section */
+    .statsContainer {
+      flex-direction: column;
+      padding: 20px;
+      width: 100%;
+    }
+    .statBox {
+      padding: 10px;
+      font-size: 1rem;
+    }
+    
+    /* AGPotato Info Boxes */
+    .agpotatoInfo {
+      flex-direction: column;
+    }
+    .infoBox {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+   
+   
+  
+ 
+    /* CS Section */
+    .csSection {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .csImage {
+      margin-right: 0;
+      padding-bottom: 15px;
+    }
+    .csImage img {
+      width: 100%; /* Ensures image fills its container in mobile view */
+      height: auto; /* Keeps the aspect ratio intact */
+      object-fit: contain; /* Makes sure the entire image fits within the container */
+    }
+    .csContent h2 {
+      font-size: 1.8em;
+    }
+    .csContent p {
+      font-size: 1rem;
+    }
+
+    .landscapeImage {
+        width: 100%;
+        height: 60vh; /* Set image height to 60% of the viewport height */
+        object-fit: cover; /* Ensure the image covers the area */
+      }
+  }
+  @media (max-width: 1400px) {
+    .statsContainer {
+      flex-direction: column; /* Stack the statistics vertically */
+    }
+   
+  
+ 
+  }
+  /* Small Screen Adjustments (max-width: 480px) */
+  @media (max-width: 480px) {
+    .supplyChainMeaning h2 {
+      font-size: 1.6rem;
+    }
+    .supplyChainMeaning p {
+      font-size: 0.9rem;
+    }
+  
+  
+ 
+    .headerTitles {
+      font-size: 2rem;
+    }
+  
+    /* Reduce padding for smaller devices */
+    .supplyChainContent, .supplyChainQuality, .sourcingSection, .csSection {
+      padding: 15px;
+    }
+  
+    .statBox, .sourcingContent h2, .csContent h2 {
+      font-size: 1.5rem;
+    }
+    .csImage img {
+      width: 100%; /* Ensures image fills its container in mobile view */
+      height: auto; /* Keeps the aspect ratio intact */
+      object-fit: contain; /* Makes sure the entire image fits within the container */
+    }
+  
+    .infoBox {
+      padding: 15px;
+      margin: 5px;
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .statisticsSection{
+        padding-bottom: 0px;
+    }
+  
+    .agpotatoInfo {
+     
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .infoBox {
+      margin-bottom: 20px; /* Space between info boxes */
+      padding: 15px;
+    }
+   
+  
+
+    
+    .infoBox h3 {
+      font-size: 1.4rem; /* Slightly smaller heading for mobile */
+    }
+  
+    .infoBox p {
+      font-size: 0.5rem; /* Smaller font size for mobile */
+    }
+    .supplyChainHeader h2 {
+      font-size: 3.5rem;
+    }
+  
+    .headerImages {
+      height: 450px;
+    }
+  
+  
+  
+  
+   
+   
+   
+  
+    
+    .csImage img {
+      width: 100%; /* Ensures image fills its container in mobile view */
+      height: auto; /* Keeps the aspect ratio intact */
+      object-fit: contain; /* Makes sure the entire image fits within the container */
+    }
+  
+  
+    .csSection {
+      flex-direction: column; /* Stack the content and image vertically */
+      text-align: center; /* Center align the text on mobile */
+      padding: 20px; /* Reduce padding on mobile */
+    }
+  
+    .csImage {
+      margin-right: 0;
+      margin-bottom: 20px; /* Space between image and content on mobile */
+    }
+  
+    .csContent {
+      margin-top: 20px; /* Space between content and image on mobile */
+    }
+  
+    .csContent h2 {
+      font-size: 1.5rem;
+    }
+  
+    .csContent p {
+      font-size: 1rem;
+    }
+  
+    .csContent ul li {
+      font-size: 1rem;
+    }
+  
+  
+  }
+  
+  
+  @media (max-width: 480px) {
+  
+    .statisticsSection {
+      padding: 20px;
+      padding-bottom: 1px;
+    }
+  
+    .statsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .statBox {
+      width: 100px; /* Smaller width for mobile */
+    }
+  
+    .statIcon {
+      font-size: 32px; /* Smaller icon size for mobile */
+    }
+  
+    .statBox p {
+      font-size: 14px; /* Smaller text size for mobile */
+    }
+  
+    .statBox h2 {
+      font-size: 24px; /* Smaller number size for mobile */
+    }
+  
+    .landscapeImage {
+      max-width: 90%; /* Adjusts image width for mobile */
+    }
+    .supplyChainHeader h2 {
+      font-size: 2.5rem;
+    }
+   
+    
+    .headerImages {
+      height: 350px;
+    }
+  
+    
+   
+   
+  
+  
+  
+   
+  
+
+  
+  
+   
+  
+    
+  
+   
+   
+    
+   
+  
+    .supplyChainMeaning p{
+      font-size: small;
+      text-align: justify;
+    }
+  
+  
+  
+   
+   
+   
+  
+    .supplyChainMeaning p{
+      font-size: small;
+      text-align: justify;
+    }
+  
+   
+  
+    
+  
+    .csSection {
+      flex-direction: column; /* Stacks content and image vertically */
+      align-items: center; /* Centers content and image in mobile view */
+      text-align: center;
+    }
+   
+   
+    .csContent, .csImage {
+      width: 90%; /* Adds padding on the sides in mobile view */
+    }
+  
+  
+    .csImage img {
+      width: 100%; /* Ensures the image takes full width within its container */
+      margin: 0 auto; /* Centers the image */
+    }
+   
+  
+    .supplyChainMeaning p{
+      font-size: small;
+      text-align: justify;
+    }
+  
+    .csContent p {
+      font-size: small;
+      text-align: justify;
+    }
+    .csContent ul{
+      font-size: small;
+      text-align: justify;
+    }
+    .csContent li{
+      font-size: small;
+      text-align: justify;
+    }
+  
+  
+    .headerTitles {
+  
+    font-size: larger;
+    }
+  
+  
+    
+   
+  }

@@ -1,0 +1,54 @@
+.title{
+    text-align: center;
+    color:  #04D939;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+
+   
+    font-weight:bolder;
+}
+
+.title h2 {
+    font-size: 30px;
+    color: #001542;
+    font-weight: bolder;
+    margin-top: 5px;
+    text-transform: none;
+    position: relative; /* Required for positioning the ::after element */
+}
+
+.title h2::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start the underline further to the right, after some space */
+    transform: translateX(-50%); /* Center the underline horizontally from its starting point */
+    bottom: -10px; /* Move the underline a little below the text */
+    width: 20%; /* Adjust this to control the length of the underline */
+    height: 5px; /* Height of the underline area */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+}
+
+@media only screen and (max-width: 768px) {
+    .potatoInsightsContainer {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .contentContainer {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .contentBox {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .title h2{
+        font-size: 13px;
+    }
+    .contentTitle {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .contentText {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    
+}   

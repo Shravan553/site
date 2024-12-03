@@ -1,0 +1,143 @@
+/* Card Styling */
+
+
+/* Card Styling */
+.landingPageCard {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 550px;
+  text-align: center;
+  border-top: 4px solid #1cf115;
+  border-bottom: 4px solid #1cf115;
+  margin: 0 auto;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Initially invisible */
+  height: 400px;
+  transform: translateY(50px); /* Move the card down */
+  transition: all 0.6s ease-out; /* Smooth transition */
+}
+
+.landingPageCard.visible {
+  opacity: 1; /* Make it visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .landingPageCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Title Styling */
+  .landingPageTitle {
+    font-size: 1.7rem;
+    color: #1cf115;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .landingPageTitle:hover {
+    color: #ff4500;
+  }
+  
+  /* Subtitle Styling */
+  .landingPageSubtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .landingPageSubtitle:hover {
+    transform: translateX(10px);
+  }
+  
+  /* Text Content Styling */
+  .testimonialpValues{
+    font-size: 1rem;
+    color: #f9fafa;
+    line-height: 1.6;
+    text-align:left;
+    background-color: #313030;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+
+  
+  /* Pulse animation */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  /* Button Styling */
+  .clickHereButton {
+    display: inline-block;
+    background: linear-gradient(90deg, #22ff00, #1b00b3);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(26, 188, 156, 0.3);
+    margin-top: 15px;
+    animation: buttonPulse 1.5s infinite;
+  }
+  
+  /* Button pulsing animation */
+  @keyframes buttonPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  .clickHereButton:hover {
+    background: linear-gradient(90deg, #1b00b3, #22ff00);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(26, 188, 156, 0.4);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .landingPageCard {
+      max-width: 90%;
+      margin: 0 auto;  /* Center the card */
+      padding: 30px 20px;  /* Reduce padding for small screens */
+      height: auto;  /* Allow the card to expand in height for better content fitting */
+    }
+  
+    /* Hide title and subtitle on mobile */
+    .landingPageTitle,
+    .landingPageSubtitle,
+    .testimonialpValues {
+      display: none;
+      
+    }
+  
+    /* Only show the button on mobile */
+    .clickHereButton {
+      font-size: 0.9em;
+      padding: 10px 20px;
+    }
+  
+    /* Ensure the background image covers properly on smaller screens */
+    .landingPageCard {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  

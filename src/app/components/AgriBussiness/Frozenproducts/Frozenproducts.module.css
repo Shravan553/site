@@ -1,0 +1,294 @@
+/* General Styles */
+
+  /* Keyframes for Animations */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation Classes */
+  .animatedSection {
+    opacity: 0;
+    transform: translateY(50px); /* Default slide-up style */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animatedSection.in-view {
+    animation: slideUp 0.8s ease-out forwards; /* Default animation */
+  }
+  
+  .animatedSection.slide-left.in-view {
+    animation: slideLeft 0.8s ease-out forwards;
+  }
+  
+  .animatedSection.fade-in.in-view {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+
+  .centeredTitle{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4CAF50; /* Green for titles */
+    position: relative; /* Required for positioning the ::after element */
+  }
+
+  .centeredTitle ::after{
+    content: '';
+    position: absolute;
+    left:23%; /* Start the underline further to the right, after some space */
+    transform: translateX(-50%); /* Center the underline horizontally from its starting point */
+    bottom: -10px; /* Move the underline a little below the text */
+    width: 11%; /* Adjust this to control the length of the underline */
+    height: 5px; /* Height of the underline area */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+  }
+  /* Hero Section */
+  .frozenHero {
+    display: flex;
+    height: 50vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .frozenHeroContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #fefcfc;
+    color: #04d939;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .frozenHeroTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .frozenHeroImageContainer {
+    flex: 1;
+    position: relative;
+  }
+  
+  .frozenHeroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .frozenHeroImageContainer:hover .frozenHeroImage {
+    opacity: 1;
+  }
+  
+  /* Description Section */
+  .frozenDescriptionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .frozenDescriptionContent {
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .frozenDescriptionTitle {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #a48650;
+    margin-bottom: 20px;
+  }
+  
+  .frozenDescriptionText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  /* Product Section */
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* Adds spacing between items */
+  padding: 40px;
+  justify-content: center; /* Centers the grid */
+}
+
+.productCard {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+  
+.productCard:hover {
+  transform: translateY(-10px); /* Lifts the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+  
+  .productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .productName {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .productDescription {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #666;
+    padding: 0 10px;
+  }
+  
+  /* Statistics Section */
+  .statisticsSection {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .statsContainer {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statBox {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .statIcon {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #4caf50;
+  }
+  
+  .statBox p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #f58353;
+  }
+  
+  .landscapeImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .frozenHero {
+      flex-direction: column;
+      height: 60vh;
+    }
+  
+    .frozenHeroContent {
+      font-size: 2rem;
+      padding: 20px;
+    }
+  
+    .frozenHeroImage {
+      height: 50%;
+    }
+  
+    .frozenDescriptionTitle {
+      font-size: 1.8rem;
+    }
+  
+    .frozenDescriptionText {
+      font-size: 1rem;
+    }
+  
+    .productsContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .frozenHeroContent {
+      padding: 10px;
+    }
+  
+    .frozenHeroTitle {
+      font-size: 1.8rem;
+    }
+  
+    .productCard {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .productImage {
+      height: 150px;
+    }
+  
+    .productsContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .frozenDescriptionText {
+      font-size: 0.9rem;
+    }
+  }
+  

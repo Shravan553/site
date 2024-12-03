@@ -1,0 +1,118 @@
+/* world.module.css */
+
+/* Ensure that the map container doesn't overflow horizontally */
+.mapMapMap {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.worldImage {
+  width: 100%;
+  height: auto;
+}
+
+.mapName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.8em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #A48650, #ffd27f);
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  position: relative; /* Required for the ::before pseudo-element */
+}
+
+
+
+
+/* Marker styles */
+.marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.marker:hover {
+  transform: scale(1.5);
+}
+
+/* Marker text styles */
+.markerText {
+  visibility: hidden;
+  background-color: rgb(247, 242, 242);
+  color: rgb(10, 1, 1);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -50%;
+  width: max-content;
+  max-width: 200px;
+  font-size: 10px;
+  line-height: 1.4;
+  transition: visibility 0.2s, opacity 0.2s;
+  opacity: 0;
+}
+
+.marker:hover .markerText {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Positioning for specific countries */
+.usa { top: 48%; left: 25%; }
+.netherlands { top: 40%; left: 50%; }
+.uae { top: 56%; left: 64%; }
+.india { top: 60%; left: 70%; }
+.australia { top: 79%; left: 84%; }
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .mapName {
+    font-size: 0.6em;
+  }
+
+  
+
+  .mapMapMap, .mapContainer {
+    width: 100%;
+  }
+
+  .worldImage {
+    width: 100%;
+  }
+
+  /* Adjust marker positions */
+  .usa { top: 54%; left: 25%; }
+  .netherlands { top: 47%; left: 50%; }
+  .uae { top: 61%; left: 63%; }
+  .india { top: 64%; left: 70%; }
+  .australia { top: 81%; left: 83%; }
+
+  /* Marker styling adjustments */
+  .marker {
+    width: 5px;
+    height: 5px;
+  }
+}

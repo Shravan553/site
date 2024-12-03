@@ -1,0 +1,306 @@
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Main Wrapper */
+  .exportpageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Header Section */
+  .exportpageHeader {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .exportpageHeaderImage {
+    width: 100%;
+    height: 80vh; /* Ensure responsive height */
+    object-fit: cover;
+  }
+  
+  .exportpageHeader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .exportpageHeaderTitle {
+    position: absolute;
+    color: #fff;
+    font-size: 2.5rem; /* Use rem for better scalability */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards; /* Delay for header title */
+  }
+  
+  .exportpagePotatoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .card {
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Smooth corners */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  .cardHeader {
+    background-color: #4caf50; /* Green header to signify agriculture */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .cardBody {
+    padding: 1.5rem;
+    color: #333; /* Darker text for readability */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+ 
+  
+  .contactButton {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 15px 25px;
+    border: 2px solid #04D939;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50px; /* Makes the button look like a pill */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contactButton:hover {
+    background-color: #04D939;
+    color: white;
+  }
+  
+  /* Export Journey Section */
+  .exportpageJourneySection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Animation */
+  }
+  
+  .exportpageJourneyImage img {
+    width: 100%;
+    max-width: 1000px; /* Slightly increase max-width for a larger image on larger screens */
+    border-radius: 12px;
+    height: 255px; /* Rounded corners with a slightly larger radius */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow to create depth */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+  }
+  
+  .exportpageJourneyImage img:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovering over the image */
+  }
+  
+  .exportpageJourneyContent {
+    background-color: #d6f5b5; /* Light background for the content section */
+    padding: 25px; /* Add padding around the content */
+    border-radius: 12px; /* Soft, rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(205, 105, 105, 0.1); /* Soft shadow around the content */
+    max-width: 900px; /* Control the width */
+    margin: 20px auto; 
+    font-size: large;
+    text-align: justify;/* Center-align the content */
+  }
+  
+  .exportpageJourneyContent h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.1rem; /* Increase the font size for the title */
+    color: #000000; /* Darker color for better readability */
+    margin-bottom: 20px; /* Increase space between the title and paragraph */
+    text-transform: uppercase; /* Uppercase text for the title */
+    letter-spacing: 2px; /* Adds some spacing between letters for a cleaner look */
+  }
+  
+  .exportpageJourneyContent p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem; /* Slightly larger font for better readability */
+    line-height: 1.8; /* Increased line height for better readability */
+    color: #555; /* Softer color for the paragraph text */
+    margin-bottom: 20px; /* More space between paragraphs */
+  }
+  
+  .exportpageJourneyContent p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last paragraph */
+  }
+  /* Export Images Section */
+  .exportpageImagesSection {
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Animation */
+  }
+  
+  
+  .exportpageImageGallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .exportpageImage {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .exportpageImageGallery img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+
+ 
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 768px) {
+    .exportpageHeaderTitle {
+      font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+  
+    .exportpagePotatoTitle,
+    .exportpageTitle {
+      font-size: 1.2rem; /* Adjusted font size for mobile */
+    }
+    
+    
+    .exportpagePotatoDescription {
+      font-size: 1.0rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    .exportpagePotatoDescription,
+    .exportpageJourneyContent p {
+      font-size: 1rem; /* Smaller text for mobile */
+    }
+  
+    .exportpageJourneySection {
+      flex-direction: column; /* Stack vertically on mobile */
+    }
+  
+    .exportpageJourneyImage img {
+      max-width: 100%; /* Ensure the image is responsive */
+    }
+  
+    .exportpageJourneyContent h2{
+  
+   font-size: 1rem;
+    }
+  
+  
+    
+    .exportpageJourneyContent p{
+  
+      font-size: 0.7rem;
+       }
+     
+    .exportpagePotatoSection,
+    .exportpageImageSection {
+      padding: 15px; /* Reduced padding for mobile */
+    }
+  
+    .exportpageHeaderImage {
+      width: 100%;
+      height: 45vh; /* Ensure responsive height */
+      object-fit: cover;
+    }
+  }
+  
+  /* Success Stories Section */
+  .exportpageSuccessStoriesSection {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .exportpageSuccessStoriesTitle {
+    font-size: 1.5rem; /* Adjusted font size for mobile */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .exportpageSuccessStory {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exportpageSuccessStory h3 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    color: #2e7d32;
+  }
+  
+  .exportpageSuccessStory p {
+    font-size: 1rem; /* Smaller font size for mobile */
+    color: #555;
+  }
+  
+  .exportpageReadMore {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .exportpageReadMore:hover {
+    background-color: #45a049;
+  }
+  

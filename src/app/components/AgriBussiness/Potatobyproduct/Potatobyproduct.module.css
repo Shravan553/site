@@ -1,0 +1,383 @@
+
+/* Section styling */
+.byprogrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 cards per row */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  justify-items: center;
+}
+
+.backcard{
+  background-color:  #001542;
+
+}
+/* Card styling */
+.byprocard {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.byprocard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.byproimage {
+  width: 100%; /* Ensures the image takes the full width of the card */
+  height: 200px; /* Fixed height for consistent image size */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Content container */
+.byprocontent {
+  padding: 20px;
+}
+
+/* Title styling */
+.byprotitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #010101;
+}
+
+/* Description styling */
+.byprodescription {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* "Know More" link styling */
+/* "Know More" link styling (Button-like) */
+.byproknowmorelink {
+  font-size: 1rem;
+  color: #04D939; /* Text color */
+  text-decoration: none;
+  padding: 10px 20px; /* Add padding to give it a button appearance */
+  border: 2px solid #04D939; /* Green border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  display: inline-block; /* Make it behave like a button */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the "Know More" button */
+.byproknowmorelink:hover {
+  color: #fff; /* White text on hover */
+  background-color: #04D939; /* Green background on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+  .byprogrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for mobile view */
+  }
+}
+
+
+.contactButton {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 15px 25px;
+  border: 2px solid #04D939;
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 50px; /* Makes the button look like a pill */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contactButton:hover {
+  background-color: #04D939;
+  color: white;
+}
+.pageContainer {
+  padding: 20px;
+  padding-left: 190px;
+  padding-right: 190px;
+
+}
+
+.infoSection {
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: normal;
+  color: black;
+  position: relative;
+  display: inline-block;
+}
+
+.boldText {
+  font-weight: bold;
+  color: black;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 45%; /* Half underline */
+  border-bottom: 5px dotted brown;
+  bottom: -9px;
+
+  left: 0;
+}
+
+.description {
+  /*padding-top: 20px;
+font-size: 16px;
+color: black;
+margin-top: 10px;
+text-align: justify; */
+
+font-family: "Hanken Grotesk", sans-serif;
+color: #666666;
+margin: 15px 0px 25px;
+padding-top: 20px;
+font-size: 19px;
+text-align: justify;
+word-spacing: 5px;
+
+
+}
+
+
+
+.whyChooseSection {
+  background-color: #b0f5b0;
+  padding: 50px 20px;
+  margin: 50px 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(100px); /* Ensures it starts from below */
+  opacity: 0;
+}
+
+.whyChooseContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.whyChooseTitle {
+  font-size: 2.5rem;
+  color: #010101;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.whyChooseDescription {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.whyChooseSection p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .whyChooseTitle {
+    font-size: 2rem;
+  }
+
+  .whyChooseDescription {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* General container for the page */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-out;
+ 
+    overflow: visible; /* Allows elements to extend outside the section */
+  }
+
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.heroTitle {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  animation: slideUp 1s ease-out;
+}
+
+/* New text Section */
+.newText {
+  margin-top: 2rem;
+  text-align: center;
+  animation: slideUp 1s ease-out;
+}
+
+.discoverText {
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: slideUp 1s ease-out;
+}
+
+/* Content Section */
+.contentSection {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contentTitle {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.contentDescription {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Product Gallery */
+.productsGallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+  animation: fadeIn 2s ease-out;
+}
+
+.productCard {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+}
+
+.productTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.productDescription {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .contentTitle {
+    font-size: 2rem;
+  }
+
+  .contentDescription {
+    font-size: 1rem;
+  }
+
+  .productsGallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productCard {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+}

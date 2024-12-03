@@ -1,0 +1,426 @@
+/* Overall styling for the section */
+.webcstoragewrapper {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header section with image and black gradient overlay */
+  .webcsstorageheader {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Use viewport height for better responsiveness */
+    overflow: hidden;
+  }
+  
+  .headerimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0.5px);
+    z-index: 0;
+  }
+  
+  /* Black gradient overlay from top */
+  .headeroverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(230, 230, 230, 0.7) 0%, rgba(0, 0, 0, 0) 40%);
+    z-index: 1;
+  }
+  
+  .headertitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  
+  /* Cold storage section styling */
+  .webcsstoragesection {
+    padding: 4rem;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    margin: 2rem 0;
+    font-family: 'Outfit', sans-serif;
+    color: #A48650;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .webcsimportancetitle {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s ease;
+  }
+  
+  .webcsimportancedescription {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #f1d0d0;
+    margin: 1rem 0;
+    animation: slideIn 1s ease;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Decorative waves */
+  .webcsstoragesection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-30%) scale(1.5);
+    z-index: 0;
+    animation: wave 4s ease-in-out infinite;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateX(-50%) translateY(-30%) scale(1.5);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-40%) scale(1.6);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-30%) scale(1.5);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .webcsstoragesection {
+      padding: 2rem;
+    }
+  
+    .webcsimportancetitle {
+      font-size: 2rem;
+    }
+  
+    .webcsimportancedescription {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .headertitle {
+      font-size: 2rem;
+    }
+  
+    .webcsstoragesection {
+      padding: 1rem;
+    }
+  }
+  
+  /* Benefits Section */
+  .webcsstoragebenefits {
+    padding: 4rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 2rem auto;
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1200px;
+  }
+  
+  .webcsbenefitstitle {
+    font-size: 2rem;
+    color: #A48650;
+    margin-bottom: 1.5rem;
+  }
+  /* Overall styling for the section */
+  .webcscoldstoragewrapper {
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  
+  /* Header section with image and black gradient overlay */
+  .webcscoldstorageheader {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Use viewport height for better responsiveness */
+    overflow: hidden;
+  }
+  
+  .webcsheaderimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0.5px);
+    z-index: 0;
+  }
+
+  
+  /* Black gradient overlay from top */
+  .webcsheaderoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+  }
+  
+  /* Title for the header */
+  .webcsheadertitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  /* Cold storage facilities section */
+  .webcscoldstore {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .webcscoldstoretitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4CAF50; /* Green for titles */
+    position: relative; /* Required for positioning the ::after element */
+  }
+  .contactButton {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 15px 25px;
+    border: 2px solid #04D939;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50px; /* Makes the button look like a pill */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contactButton:hover {
+    background-color: #04D939;
+    color: white;
+  }
+  .webcscoldstoretitle::after {
+    content: '';
+    position: absolute;
+    left:34%; /* Start the underline further to the right, after some space */
+    transform: translateX(-50%); /* Center the underline horizontally from its starting point */
+    bottom: -10px; /* Move the underline a little below the text */
+    width: 11%; /* Adjust this to control the length of the underline */
+    height: 5px; /* Height of the underline area */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+  }
+  
+  
+  
+  .webcscoldstoredescription {
+    font-size: 1.125rem; /* Slightly larger for readability */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin: 1rem auto; /* Space between paragraphs */
+    max-width: 800px; 
+    /* Limiting width for better readability */
+    text-align:justify; /* Center align for presentation */
+    color: #333; /* Dark text for visibility */
+    padding: 1rem; /* Padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .webcscoldstoretitle {
+      font-size: 2rem; /* Smaller font size for mobile */
+    }
+  
+    .webcscoldstoredescription {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+  }
+  /* Cold Storage Facilities Section */
+  .webcscoldstore {
+    padding: 4rem 2rem; /* Increased padding for a spacious layout */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Outfit', sans-serif; /* Consistent font */
+  }
+  
+  .webcscoldstoragegallery1 {
+    padding: 2rem 1rem;
+  }
+  .webcsgallerygrid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem; /* Space between images */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .webcsgalleryimage1 {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Smooth scale transition */
+  }
+  
+  .webcsgalleryimage1:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  /* Benefits of Cold Storage section */
+  .webcscoldstoragebenefits {
+    padding: 2rem;
+    background-color: #e0f7fa; /* Light blue background for contrast */
+  }
+  
+  .webcsbenefitstitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #00796b; /* Darker green */
+  }
+  
+  .webcsbenefitslist {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items */
+    justify-content: center; /* Center items */
+    color: #f1f1f1;
+  }
+  
+  .webcsbenefititem {
+    width: 30%; /* Adjust width as needed */
+    padding: 1rem;
+    margin: 0.5rem;
+    background: #292727;
+     /* White background for items */
+     /* White background for items */
+     color: #fffdfd;
+    border: 1px solid #ccc; /* Border for separation */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+  }
+  
+  .webcsbenefititem:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .webcsbenefititem .icon {
+    font-size: 2rem; /* Icon size */
+  }
+  
+  /* Importance section styling */
+  .webcscoldstoragesection {
+    padding: 2rem;
+    background-color: #fff; /* White background */
+  }
+  
+  .webcsimportancetitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4CAF50; /* Green for titles */
+  }
+  
+  .webcsimportancedescription {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    color:#333;
+    max-width: 800px; /* Limiting width for better readability */
+    text-align: center; /* Center align for better presentation */
+  }
+  
+  
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .webcsbenefititem {
+      width: 45%; /* Stack in two columns on smaller screens */
+    }
+  
+    .webcsheadertitle {
+      font-size: 2rem; /* Smaller font size for mobile */
+    }
+  
+    .webcscoldstoretitle {
+      font-size: 2rem; /* Smaller font size for mobile */
+    }
+  
+    .webcsimportancedescription
+    {
+  
+      font-size: 0.9rem;
+  
+    }
+  
+    .webcsimportancetitle {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+    .webcsgallerygrid1 {
+      grid-template-columns: repeat(2, 1fr); /* Two images per row */
+      gap: 0.5rem; /* Adjust spacing for mobile if needed */
+    }
+    .webcsbenefititem {
+      flex: 1 1 calc(50% - 8px); /* Two items per row in mobile */
+    }
+   
+  }
+  
+  @media (max-width: 480px) {
+    .webcsbenefititem {
+      width: 100%; /* Full width on extra small screens */
+    }
+  
+    .webcsheadertitle {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+  
+    .webcsheaderimage{
+      height: 550px;
+      
+    }
+  }
+  

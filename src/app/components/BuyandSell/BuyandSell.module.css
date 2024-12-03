@@ -1,0 +1,351 @@
+/* General Styles */
+.container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .marketimage {
+    width: 100%; /* Full width of the container */
+    height: 550px; /* Fixed height */
+    margin: 20px 0; /* Space around */
+    object-fit: cover; /* Cover the area without distortion */
+    display: block; /* Behaves like a block element */
+    border: 2px solid #50f77c; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+  }
+  
+  /* Header */
+  .headingpot {
+    font-size: 32px; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark gray color */
+    margin: 20px 0; /* Margin for spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align */
+  }
+  
+  .headingpot:hover {
+    color: #4CAF50; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Category Images Section */
+  .categoryimages {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+  }
+  
+  .categoryimage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border: 7px solid #04D939; /* Green border */
+  
+  }
+  
+  .categoryimage:hover {
+    transform: scale(1.1);
+  }
+  
+  .categorytitle {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #A48650;
+  }
+  
+  /* Potato Items Display Section */
+  .potatoimagescontainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .potatoitem {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  
+  .potatoinforow {
+    display: flex;
+    align-items: center;
+    border: 3px solid #001542;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+  }
+  
+  .potatoinforow:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .potatoimage {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .potatodetails {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .potatoname {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: #FF6347;
+  }
+  
+  .potatodescription {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  /* Buttons Styling */
+  .potatobuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+  
+  .buybutton,
+  .sellbutton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    border-color: #25D366;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buybutton {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .sellbutton {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .buybutton:hover {
+    background-color: #45a049;
+  }
+  
+  .sellbutton:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Footer Section */
+  .infosection {
+    margin-top: 20px;
+  }
+  
+  /* Popup Styles */
+  .popupoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    border-color: #25D366;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+  }
+  
+  .contactbuttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .callbutton,
+  .whatsappbutton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .callbutton {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .whatsappbutton {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .callbutton:hover {
+    background-color: #0056b3;
+  }
+  
+  .whatsappbutton:hover {
+    background-color: #1da851;
+  }
+  
+  .closepopup {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+  }
+  
+  .closepopup:hover {
+    background-color: #bbb;
+  }
+  
+  /* Mobile Responsiveness */
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    
+    /* General Container */
+    .container {
+      padding: 10px; 
+      object-fit: cover; /* Ensure the image covers the entire area without distortion */
+      /* Add padding for better readability */
+    }
+  
+    .marketimage {
+      width: 100%;
+      height:auto;        /* Full width of the screen */
+      object-fit:fill;/* Ensure the entire image fits without distortion */
+       /* Make the image a block-level element */
+    }
+    
+  
+    /* Header */
+    .headingpot {
+      font-size: 24px; /* Slightly smaller for mobile */
+      padding: 0 10px; /* Add padding for narrower screens */
+    }
+  
+    /* Category Images Section */
+    .categoryimages {
+      flex-direction: column; /* Stack images vertically */
+      align-items: center; /* Center-align images */
+      gap: 20px; /* Reduced gap for mobile */
+    }
+  
+    .categoryimage {
+      width: 200px; /* Adjusted size for smaller screens */
+      height: 200px; /* Maintain aspect ratio */
+    }
+  
+    .categorytitle1 {
+      font-size: 20px; /* Reduce text size */
+    }
+  
+    /* Potato Items Display Section */
+    .potatoimagescontainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .potatoitem {
+      max-width: 100%; /* Full width on mobile */
+      margin: 10px 0; /* Reduce spacing */
+    }
+  
+    .potatoinforow {
+      flex-direction: column; /* Stack info vertically */
+      align-items: center; /* Center-align content */
+      padding: 10px; /* Adjust padding for mobile */
+      width: 100%; /* Full width */
+    }
+  
+    .potatoimage {
+      width: 100px; /* Smaller image size */
+      height: auto;
+      margin-bottom: 15px; /* Space below image */
+    }
+  
+    .potatodetails {
+      text-align: center; /* Center-align text */
+    }
+  
+    .potatoname {
+      font-size: 18px; /* Adjust font size */
+    }
+  
+    .potatodescription {
+      font-size: 14px; /* Smaller font size */
+    }
+  
+    /* Buttons Styling */
+    .potatobuttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px; /* Adjust spacing */
+    }
+  
+    .buybutton,
+    .sellbutton {
+      width: 100%; /* Full width for easy tapping */
+      padding: 12px; /* Larger padding for tap area */
+    }
+  
+    /* Popup Styles */
+    .popupoverlay {
+      padding: 10px; /* Add padding for mobile view */
+    }
+  
+    .popup {
+      max-width: 90%; /* Reduce max width for smaller screens */
+      padding: 15px; /* Adjust padding */
+    }
+  
+    /* Contact Buttons */
+    .contactbuttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px;
+    }
+  
+    .callbutton,
+    .whatsappbutton {
+      width: 100%; /* Full width for buttons */
+      padding: 12px; /* Larger padding for tap area */
+    }
+  
+    .closepopup {
+      width: 100%; /* Full width */
+    }
+  }

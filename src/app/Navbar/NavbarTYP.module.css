@@ -1,0 +1,262 @@
+
+  
+  .navbar1 {
+    background-color: white;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Set to full viewport width */
+    margin: 0; /* Remove any margin */
+    left: 0; /* Ensure it starts at the left edge */
+    right: 0; /* Ensure it ends at the right edge */
+  }
+  
+  .logo1 {
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80px; /* Set a maximum height */
+    width: auto; /* Prevent distortion */
+    max-width: 440px; /* Ensure the logo doesn't grow too large */
+    filter: none;
+  }
+  
+  .navLogo1 {
+    font-size: 2.8rem; /* Keep font size consistent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .navLogo {
+    color: #04D939;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    flex-grow: 1;
+    display: flex;
+  }
+  
+  .navLogo .icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 16px;
+  }
+  
+  .navMenu {
+    display: flex; /* Flexbox for alignment */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-end; /* Align items to the right */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: visible; /* Ensure items are visible */
+    width: auto; /* Let the menu expand as needed */
+  }
+  
+  .navLinks {
+    color: black;
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap; /* Prevent text wrapping */
+    box-sizing: border-box;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-size: 0.9rem; /* Reduce font size slightly for smaller screens */
+  }
+  
+  .navItem {
+    line-height: 40px;
+    margin-right: 1rem;
+    font-weight: 700;
+    position: relative;
+  
+  }
+  
+  .navItem:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+  
+  .navItem:hover:after {
+    width: 100%;
+    background: #04D939;
+  }
+  
+  .navItem .active {
+    color: #04D939;
+    border: 2px solid #04D939;
+  }
+  
+  
+  
+  .navIcon .icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between; /* Space out children elements */
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 50px;
+    padding: 0 20px; /* Add padding */
+    position: relative; /* Ensure children respect this container */
+  }
+  
+  .navIcon {
+    display: none; /* Hidden in desktop view */
+    position: absolute; /* Positioned relative to the .navbar1 */
+    right: 20px; /* Align to the right within the container */
+    top: 50%; /* Vertically centered within the navbar */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer; /* Make it clickable */
+    z-index: 15; /* Ensure it appears above other elements */
+  }
+  
+  /* Adjust dropdown styling */
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    top: 100%; /* Position below the nav-item */
+    left: 0; /* Align with the parent nav-item */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  /* Desktop dropdown menu display on hover */
+  .navItem:hover .dropdownMenu {
+    display: block;
+  }
+  
+  
+  @media screen and (min-width: 961px) {
+    .dropdownIcon {
+      display: none; /* Hide in desktop view */
+    }
+  
+    .navItem .active {
+      color: #04D939;
+      height: 10px;
+      border: 2px solid #04D939;
+      padding: 0.3rem 0.6rem; /* Adjust padding for smaller screens */
+    }
+  }
+  /* Mobile View adjustments */
+  @media screen and (max-width: 960px) {
+  
+    .navItem .active {
+      color: #04D939;
+      height: 10px;
+      border: 2px solid #04D939;
+      padding: 0.3rem 0.6rem; /* Adjust padding for smaller screens */
+    }
+    .navIcon {
+      display: block; /* Show in mobile view */
+    }
+  
+    .navMenu {
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: -100%; /* Initially hide off-screen */
+      width: 100vw;
+      background: #1f5156;
+      align-items: flex-start;
+      padding-left: 20px;
+      z-index: 5;
+    }
+  
+    .navMenu.active {
+      left: 0; /* Show menu when active */
+    }
+    
+    .dropdownIcon {
+      display: none; /* Hide in desktop view */
+    }
+    
+   
+   
+  
+    .dropdownItem {
+      padding: 10px 20px;
+    }
+    .navItem {
+      margin-bottom: 4px; /* Adds space below each item */
+    }
+    .navMenu.active .dropdownMenu {
+      display: block;
+    }
+    /* For active state on mobile */
+    .navItem.active {
+      background-color: #2a3d42;
+    }
+  
+    .dropdownMenu {
+      position: relative;
+      top: 0;
+      width: 100%;
+      margin-top: 10px;
+      background-color: #fff;
+      box-shadow: none;
+    }
+  
+    .navIcon {
+      display: block;
+      height: 40px;
+  
+    }
+    .navLogo1 {
+      font-size: 0.1rem;
+    }
+  
+    .logo1 {
+    
+        height: 80px; 
+        width: 240px;
+        filter: none; 
+      
+      
+    
+  }
+}
+  @media screen and (max-width: 768px) {
+    .dropdownMenu {
+      max-height: 100px; /* Limit height */
+      overflow-y: auto; /* Enable vertical scroll */
+    }
+  
+  
+    
+    
+    
+    
+  
+    
+    .nav-item .active {
+      color: #04D939;
+      height: 10px;
+      border: 2px solid #04D939;
+      padding: 0.3rem 0.6rem; /* Adjust padding for smaller screens */
+    }
+    
+    
+    
+  }

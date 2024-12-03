@@ -16,6 +16,12 @@
   font-family: var(--font-geist-sans);
 }
 
+.container {
+  padding-left: 0%;
+  padding-right: 0%;
+  width: 100%; /* Ensure it takes the full width */
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;

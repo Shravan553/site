@@ -1,0 +1,919 @@
+.imuneContainer {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    overflow-x: hidden; /* Avoid horizontal scroll */
+  }
+  
+  .imuneHero {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 80vh;
+    position: relative; /* Ensures proper positioning of the ::before overlay */
+    text-align: center; /* Center the text horizontally */
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  /* Hero Text */
+  .heroText {
+    z-index: 2;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out; /* Add animation for hero text */
+  }
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  /* Hero Image */
+  .heroImage {
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: blur(2px); Blurred image */
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out; /* Smooth scaling effect */
+  }
+  
+  /* Immune System Section */
+  .immuneSystem {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e0eafc, #767b82); /* Soft gradient background */
+    text-align: center;
+  }
+  
+  .immuneSystem h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .immuneSystem h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #ffdd00;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    color: #f1077c;
+    padding: 20px;
+    width: 22%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 221, 0, 0.2), transparent);
+    z-index: 0;
+    transform: rotate(45deg);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    font-size: 1.6rem;
+    color: #ffdd00;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555555;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Animation for Hero Section */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      width: 45%;
+    }
+    .immuneSystem h2{
+      font-size: 0.8rem;
+  
+  
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+  
+    .heroText h1 {
+      font-size: 2.5rem;
+    }
+  
+    .heroText p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Immune Facts Section */
+  .immuneFacts {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa); /* Light, soft gradient */
+    text-align: center;
+  }
+  
+  .immuneFacts h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .immuneFacts h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #ff6f61;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .factsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .factCards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }*
+  .immuneResponse {
+    padding: 60px 20px;
+    background-color: #f0f8ff;
+  }
+  
+  .responseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .responseText {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .responseText h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .responseText h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #ff6f61;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .responseText p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .responseImage {
+    flex: 1;
+  }
+  
+  .responseImage .immuneImage {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .responseImage .immuneImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .responseContainer {
+      flex-direction: column;
+    }
+  
+    .responseText, .responseImage {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Potato Importance Section */
+  .potatoImportance {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e6f7ff, #f9f9f9); /* Gradient background for depth */
+    text-align: center;
+    border-top: 5px solid #4caf50; /* Add a colored border for emphasis */
+  }
+  
+  .importanceCard {
+    max-width: 800px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card */
+    padding: 30px;
+    background-color: #fff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .importanceCard:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  }
+  
+  .importanceCard h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Added letter spacing for better readability */
+    font-weight: 600; /* Slightly bolder font */
+  }
+  
+  .importanceCard p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 15px;
+    padding: 0 10px; /* Side padding for text */
+  }
+  
+  /* Add subtle text shadow to paragraph for depth */
+  .importanceCard p {
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.7); /* Subtle text shadow */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .importanceCard {
+      padding: 20px; /* Reduce padding on smaller screens */
+    }
+  
+    .importanceCard h2 {
+      font-size: 1rem; /* Smaller heading on mobile */
+    }
+  
+    .importanceCard p {
+      font-size: 0.8rem; /* Smaller paragraph text on mobile */
+    }
+  }
+  
+  
+  /* Animations for the icons */
+  .factCard i {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .factCard:hover i {
+    color: #00ff4c;
+    transform: rotate(360deg); /* Rotate icon on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .factCard {
+      flex-basis: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .factCard {
+      flex-basis: 100%;
+    }
+  }
+  
+  .herosText h1 {
+    font-size: 3.5rem; /* Make the text larger */
+    color: #0c0c0b; /* Highlight the title in a bright yellow */
+    margin-bottom: 20px;
+    text-align: center; /* Ensure text is centered */
+  }
+  
+  .herosText p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center; /* Ensure text is centered */
+  }
+  
+  .herosImage {
+    flex: 1;
+    z-index: 1; /* Ensure image is above the overlay */
+    display: flex;
+    align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: blur(1px); Blur effect for the image */
+    opacity: 0.8; /* Slightly lower opacity to enhance the blurred effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .imuneHero {
+      flex-direction: column; /* Stack text and image vertically on smaller screens */
+    }
+ 
+    .potatoHeroImg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .potatoInsightsContainer {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .contentContainer {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .contentBox {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .contentTitle {
+        font-size: 0.8rem; /* Smaller title font for mobile */
+    }
+    .contentText {
+        font-size: 0.8rem; /* Smaller text font for mobile */
+    }
+    .knowmorebutton {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+  }   
+  
+  .scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .sscrollToTop:hover {
+    background-color: #03c829;
+  }
+  
+  
+  /* Global Container */
+  .imuneContainer {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    overflow-x: hidden; /* Avoid horizontal scroll */
+  }
+  
+  /* Hero Section */
+  .imuneHero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(0, 0, 0, 0.7));
+  }
+  
+  .imuneHero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+  }
+
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  .potatoHeroImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: blur(10px); */
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Immune System Section */
+  .immuneSystem {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
+    text-align: center;
+  }
+  
+  .immuneSystem h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .immuneSystem h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #ffdd00;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+  }
+  
+  .card {
+    background-color: #e30066;
+    color: #f1ebeb;
+    padding: 20px;
+    width: 22%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card p {
+color: white;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    font-size: 1.6rem;
+    color: #ffdd00;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Hero Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design for Cards */
+  @media (max-width: 768px) {
+    .card {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+   
+    .imuneHero {
+    padding-bottom: 50px;
+    }
+    .heroText p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Immune Facts Section */
+  .immuneFacts {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+    text-align: center;
+  }
+  
+  .immuneFacts h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .immuneFacts h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #ff6f61;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .factsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .factCard {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    flex-basis: 22%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  .factCard  p{
+    font-family:'Times New Roman', Times, serif
+  }
+  .factCard  h3{
+    color: red;
+  }
+  
+  .factCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .factCard i {
+    font-size: 3rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+  }
+  
+  .factCard:hover i {
+    color: #00ff4c;
+    transform: rotate(360deg);
+  }
+  
+  @media (max-width: 768px) {
+    .factCard {
+      flex-basis: 45%;
+    }
+    /* Hero Section */
+.imuneHero {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(0, 0, 0, 0.7));
+  }
+  
+
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .factCard {
+      flex-basis: 100%;
+    }
+    /* Hero Section */
+.imuneHero {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(0, 0, 0, 0.7));
+  }
+  
+  .herosText {
+    padding: 20px;
+    z-index: 2;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+  }
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+  }
+  
+  /* Potato Importance Section */
+  .potatoImportance {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e6f7ff, #f9f9f9);
+    text-align: center;
+    border-top: 5px solid #4caf50;
+  }
+  
+  .importanceCard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .importanceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .importanceCard h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .importanceCard p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.7);
+  }
+  
+  @media (max-width: 768px) {
+    .importanceCard {
+      padding: 20px;
+    }
+  /* Hero Section */
+.imuneHero {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(0, 0, 0, 0.7));
+  }
+  
+ 
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+    .importanceCard h2 {
+      font-size: 0.9rem;
+    }
+    /* Hero Section */
+.imuneHero {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(0, 0, 0, 0.7));
+  }
+  
+
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+    /* Hero Section */
+.imuneHero {
+height: fit-content;
+  }
+  
+  .heroText {
+    margin-top: 20px; /* You can adjust the value as needed */
+    /* or alternatively */
+    padding-top: 590px;
+    display: none; /* You can also use padding */
+  }
+  
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #ffdd00;
+    margin-bottom: 15px;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+  }
+  
+  .potatoHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+    .importanceCard p {
+      font-size: 0.8rem;
+      text-align: left;
+    }
+    
+  }
+  

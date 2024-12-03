@@ -1,0 +1,156 @@
+/* General Styling */
+.galleryBody {
+  background: linear-gradient(to bottom right, #F8F8F8, #E0E0E0);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #04D939;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scrollToTop:hover {
+  background-color: #03c829;
+}
+
+/* Gallery Entry */
+.galleryEntry {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.entryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the container without distortion */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.entryImage:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.entryOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.entryOverlay:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.entryTitle {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Section Descriptions */
+.sectionDescription {
+  margin: 10px 0 20px;
+  font-size: 25px;
+  color: #A48650;
+  line-height: 1.6;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.gridItem {
+  aspect-ratio: 4 / 2.5; /* Defines proportional width and height */
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px #001542;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s, opacity 0.3s;
+  border: 2px solid transparent;
+}
+
+.gridItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the grid item without distortion */
+  object-position: center; /* Centers the image */
+}
+
+.gridItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px #001542;
+  border: 5px solid #04D939;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .galleryBody {
+      font-size: 0.9rem; /* Reduce general font size for mobile */
+  }
+
+  .entryTitle {
+      font-size: 24px; /* Smaller title font size */
+  }
+
+  .sectionDescription {
+      font-size: 20px; /* Smaller description font size */
+  }
+
+  .gridContainer {
+      grid-template-columns: 1fr; /* Single-column layout on mobile */
+      gap: 10px;
+      padding: 0 5px;
+  }
+
+  .gridItem {
+      height: 150px; /* Adjust height for mobile */
+  }
+}
+
+/* For very small screens, like smartphones */
+@media (max-width: 480px) {
+  .galleryBody {
+      font-size: 0.7rem; /* Further reduce general font size */
+  }
+
+  .entryTitle {
+      font-size: 13px; /* Further reduce title font size */
+  }
+
+  .sectionDescription {
+      font-size: 12px; 
+      text-align: left; /* Smaller description font */
+  }
+
+  .gridContainer {
+      grid-template-columns: 1fr; /* Maintain single-column layout */
+  }
+
+  .gridItem {
+      height: 120px; /* Further adjust height */
+  }
+}

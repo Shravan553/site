@@ -1,0 +1,227 @@
+
+
+.yellow-potatoes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* General Styles */
+
+
+.imageContent {
+    flex: 0 0 auto; /* Prevent shrinking and keep image size fixed */
+    display: flex;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.potatoImage {
+    width: 250px; /* Specific width for the image */
+    height: 250px; /* Maintain aspect ratio */
+    /* object-fit: contain;  */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Normal Image List Styles */
+.imageGallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.imageGallery img {
+    width: 250px; /* Slightly increased size for better visuals */
+    height: 250px;
+    margin: 15px;
+    border-radius: 12px; /* Rounded edges for images */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Refined shadow */
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.imageGallery img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Main Content Styles */
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0; /* Increased margin for more breathing space */
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px; /* Round corners for a more modern appearance */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex-wrap: wrap;
+    max-width: 900px; /* Reduced max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textContent {
+    max-width: 60%;
+    margin-right: 30px; /* Slightly more space between text and image */
+}
+
+.titles {
+    font-size: 3.5em; /* Larger title size */
+    margin: 0;
+    color: #4e3b31; /* Darker brown for titles */
+    font-weight: 700; /* Increased weight for better prominence */
+}
+
+.subtitle {
+    font-size: 2.5em; /* Larger subtitle */
+    margin: 20px 0;
+    color: #6e6e6e; /* Medium gray for subtitles */
+}
+
+.tagline {
+    font-size: 1.8em; /* Slightly bigger font size */
+    font-style: italic;
+    color: #888; /* Lighter gray for the tagline */
+}
+
+.description {
+    font-size: 1.2em; /* Increased font size for better readability */
+    margin: 20px 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+.see-details-btn {
+    padding: 15px 20px;
+    border: none;
+    background-color: #f59e0b; /* Amber */
+    color: white;
+    border-radius: 8px; /* Rounded button corners */
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.see-details-btn:hover {
+    background-color: #d47c00; /* Darker amber */
+    transform: scale(1.05);
+}
+
+.detailsSection {
+    margin-top: 50px;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #011626 0%, #35ba3f 100%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow for the section */
+}
+.detailsCard {
+    background: white; /* White background for each card */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff5e6, #86fab3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+.detailsCard:hover {
+
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+
+}
+.tipBox {
+margin-top: 20px;
+padding: 15px;
+background-color: #fff7e6;
+border-left: 4px solid #f59e0b;
+font-size: 1.2em;
+color: #444;
+}
+.detailsTitle {
+    font-size: 2.1em; /* Larger title */
+    color: #4a4a4a; /* Dark gray */
+    margin-top: 20px;
+    font-weight: 700; /* Bold title */
+}
+
+.detailsText {
+    font-size: 1.2em; /* Slightly larger text */
+    /* line-height: 1.8; */
+    color: #555;
+    marker: none;
+}
+/* Card Icon */
+.detailsIcon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    background-color: #f59e0b; /* Highlight color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Depth for the icon */
+}
+
+.bestServedList {
+    /* list-style-type: disc; */
+    padding-left: 20px;
+    margin: 20px 0;
+    font-size: 1.2em; /* Slightly larger text */
+}
+
+.bestServedImage {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px; /* More spacing for better visuals */
+}
+.marker {
+    display: none;
+}
+
+/* Fun GIF Section Styles */
+.funGifSection {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cookingGif {
+    width: 350px; /* Larger gif */
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Refined shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align */
+        padding: 20px;
+    }
+
+    .textContent {
+        max-width: 100%; /* Full width on mobile */
+        text-align: center;
+        margin-right: 0; /* Remove margin on small screens */
+    }
+
+    .imageGallery {
+        flex-direction: column; /* Stack images vertically on small screens */
+    }
+
+    .imageGallery img {
+        width: 100%; /* Full width for images */
+        max-width: none; /* Remove max width */
+        margin: 10px 0;
+    }
+}

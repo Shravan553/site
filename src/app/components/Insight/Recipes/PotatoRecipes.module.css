@@ -1,0 +1,421 @@
+/* Supply Chain Meaning Section */
+
+
+
+.webrecImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .webrecImage {
+    position: relative;
+    flex: 1 1 27%; /* For larger screens: 4 images per row */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .webrecImage img {
+    width: 100%;
+    height: 38vh;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Overlay */
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .webrecImage:hover .imageOverlay {
+    opacity: 1;
+  }
+  .imageDescription {
+    font-size: 0.9rem;
+    color: #f8f8f8;
+    margin-top: 10px;
+    text-align: center;
+  }
+  /* Improved Description Box Styles */
+  .descriptionBox {
+    padding: 20px;
+    background: linear-gradient(145deg, #d96565, #d9d9d9); /* Gradient background for a modern look */
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover transition */
+  }
+  
+  .descriptionBox:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+  }
+  
+  /* Description text styles */
+  .descriptionBox p {
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: 500; /* Medium weight to make text stand out */
+    color: #460000; /* Darker color for better readability */
+    line-height: 1.5; /* Improved line height for readability */
+    margin: 0;
+  }
+  
+  
+  /* Header Section with Black Overlay on Image */
+ 
+  /* Black Overlay using ::before */
+
+ 
+  
+
+ 
+
+  
+ 
+  
+  /* Sourcing Section */
+  .sourcingSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px; /* Increased padding for more space */
+    background-color: #F9F9F9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Space above and below the section */
+  }
+  
+  .sourcingContent {
+    flex: 1;
+    margin-right: 40px; /* Space between text and image */
+    text-align: center; /* Center align text */
+  }
+  
+  /* Sourcing Section Styles */
+  .sourcingSection {
+    background-color: #F9F9F9; /* Light background color */
+    padding: 40px; /* Padding for spacing */
+    margin-bottom: 30px; /* Space below the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center align text */
+  }
+  
+  .sourcingSection h2 {
+    font-size: 2.5rem; /* Larger heading size */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #5A3D1B; /* Dark brown color for headings */
+  }
+  
+  .sourcingSection p {
+    font-size: 1.2rem; /* Readable font size */
+    color: #333; /* Standard text color */
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center the paragraph */
+  }
+  
+  
+  /* Images Row Styles */
+  .sourcingImages {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the images */
+    margin: 20px 0; /* Space above and below the images */
+  }
+  
+  .sourcingImage {
+    position: relative; /* Required for positioning the overlay */
+    flex: 1 1 30%; /* Make each image take up approximately 30% of the row */
+    padding: 10px; /* Remove padding around each image */
+    margin: 0; /* Remove margin to ensure they are connected */
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
+  
+  .sourcingImage img {
+    width: 770px; /* Full width within its container */
+    height: 260px; /* Maintain aspect ratio */
+    aspect-ratio: 1 / 1; /* Ensure it stays square */
+    object-fit: cover; /* Fill the square container without distortion */
+    border-radius: 8px; /* Add rounded corners if needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Image Overlay */
+  .imageContainer {
+    position: relative; /* Required for the overlay */
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+  }
+  
+  /* Show overlay on hover */
+  .sourcingImage:hover .imageOverlay {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
+  /* View Recipe Button Styles */
+  .viewRecipeButton {
+    background-color: #D28F2C; /* Golden color */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Space between title and button */
+    transition: background-color 0.3s ease; /* Smooth background change */
+  }
+   .recipesSection {
+    padding: 10px;
+    height: auto;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  /* General styles for the section */
+  .recdesSection {
+    background: linear-gradient(135deg, rgba(255, 223, 186, 0.8), #A48650); /* Soft potato-themed background */
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  .recdesContent {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #4a4a4a;
+  }
+  
+  .sourcingSection {
+    font-size: 2.5rem;
+    font-family: 'Outfit', sans-serif;
+    color: #6c4f32;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .recdesContent p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out forwards;
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .recdesSection {
+      padding: 40px 20px;
+    }
+  
+    .sourcingSection {
+      font-size: 2rem;
+    }
+  
+    .recdesContent p {
+      font-size: 1rem;
+    }
+  }
+  
+  
+  
+  .recipesSection h2 {
+    margin-bottom: 15px; /* Space below the heading */
+  }
+  
+  .recipesSection p {
+    margin: 10px 0; /* Space between paragraphs */
+    font-size: 1.1em; /* Slightly larger font for readability */
+  }
+  
+  .viewRecipeButton:hover {
+    background-color: #B97B2A; /* Darken on hover */
+  }
+  /* Container for the whole hero section */
+  .recheroSection {
+    display: flex;
+    justify-content: space-between; /* Space out the left and right sections */
+    align-items: center;
+    width: 100%;
+    height: 400px; /* You can adjust the height as needed */
+    margin-bottom: 40px; /* Add space between sections */
+  }
+  
+  /* Left Section for Image */
+  .recheroImageSection {
+    flex: 1; /* Make this section take up half of the width */
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Style for the image */
+  .recheroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the area without stretching */
+  }
+  
+  /* Right Section for Text */
+  .recheroTextSection {
+    flex: 1; /* Make this section take up the other half of the width */
+    height: 100%;
+    background-color: #f0f0f0; /* Optional: background color for the right section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Style for the Heading */
+  .recheroTextSection h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333; /* Change text color as needed */
+    margin: 0;
+  }
+  
+  /* Optional: Make it responsive for smaller screens */
+  @media (max-width: 768px) {
+    .recheroSection {
+      flex-direction: column; /* Stack the image and text on top of each other */
+      height: auto;
+    }
+  
+    .recheroTextSection h1 {
+      font-size: 2rem;
+      padding: 0 10px; /* Add some padding for smaller screens */
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+   
+  
+    .sourcingImages {
+      flex-direction: column; /* Stack images vertically */
+    }
+  
+    .sourcingImage {
+      flex: 1 1 100%; /* Take full width on mobile */
+      margin-bottom: 20px; /* Add space between images */
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+  
+  
+    .descriptionBox p{
+      font-size: 0.6rem;  }
+    .webrecImage {
+      flex: 1 1 48%; /* Makes each image take 48% of the row */
+      max-width: 48%; /* Restricts width for each image to fit two per row */
+      margin-bottom: 10px;
+    }
+  
+    .webrecImage img {
+      height: 25vh; /* Adjusts image height for mobile */
+    }
+   
+    .contentContainer {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .contentBox {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .contentTitle {
+        font-size: 1rem; /* Smaller title font for mobile */
+    }
+    .contenText {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .recheroTextSection h1{
+      font-size: 0.9rem;
+    }
+    .sourcingSection h1{
+      font-size: 1.7rem;
+  
+  
+    }
+    .viewRecipeButton
+    {
+      font-size: 8px;
+    }
+   
+  
+    .recdesContent p {
+      font-size: 6px; /* Smaller font size for paragraph text */
+      margin-bottom: 8px; /* Reduce margin between paragraphs */
+    }
+  
+    .recdesSection {
+      padding: 3px;
+      text-align: left;
+      font-size: 10px; /* Reduce padding on mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+  }   

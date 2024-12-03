@@ -1,0 +1,195 @@
+/* Full-screen container */
+.skinPageContainer {
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  /* Background Image - Full Screen */
+  .backgroundImageContainer {
+    width: 100%;
+    height: 90vh; /* Makes the image take up 90% of the viewport height */
+    position: relative;
+  }
+  
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full screen without distortion */
+  }
+  
+  /* Add the black transparent overlay */
+  .backgroundImageContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+  }
+  
+  /* Text Overlay */
+  .overlayTextContainer {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .overlayHeading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow */
+  }
+  
+  .overlayDescription {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  /* New Section Below the Image */
+  .infoSection {
+    padding: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  
+  .infoHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .infoDescription {
+    font-size: 1.2rem;
+    color: #0c0b0b;
+  }
+  
+  /* Home Remedies Section */
+  .homeRemedySection {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 10px; /* Rounds the corners */
+    margin: 20px auto; /* Centers the section with margins */
+    max-width: 800px; /* Sets a maximum width for the section */
+    transition: transform 0.3s; /* Animation for hover effect */
+  }
+  
+  /* Hover Effect for Home Remedy Section */
+  .homeRemedySection:hover {
+    transform: scale(1.02); /* Slightly enlarges the content on hover */
+  }
+  
+  /* Heading Styles */
+  .remedyHeading {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Darker color for better readability */
+  }
+  
+  /* Remedy Content Styles */
+  .remedyContent {
+    margin-top: 20px;
+    border: 1px solid #e0e0e0; /* Light border around the content */
+    border-radius: 10px; /* Rounds the corners */
+    padding: 20px; /* Adds padding inside the border */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    transition: transform 0.3s; /* Animation for hover effect */
+  }
+  
+  /* Hover Effect for Remedy Content */
+  .remedyContent:hover {
+    transform: scale(1.02); /* Slightly enlarges the content on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+  }
+  
+  /* Image Styles */
+  .remedyImage {
+    width: 100%;
+    max-width: 400px; /* Limit image width */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the image */
+  }
+  
+  /* Title Styles */
+  .remedyTitle {
+    font-size: 2rem; /* Larger font size for title */
+    font-weight: bold;
+    margin-top: 20px;
+    color: #444; /* Slightly darker color */
+  }
+  
+  /* Ingredients List Styles */
+  .ingredientsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .ingredientsList li {
+    font-size: 1.2rem;
+    color: #4e2bec; /* Darker color for better readability */
+    margin: 10px 0; /* Space between items */
+    position: relative; /* Allows positioning of the checkmark */
+  }
+  
+  .ingredientsList li::before {
+    content: '✔'; /* Unicode for a check mark */
+    position: absolute; /* Positions the check mark */
+    left: 0; /* Aligns the check mark to the left */
+    color: #28a745; /* Green color for the check mark */
+    font-size: 1.5rem; /* Size of the check mark */
+    line-height: 1.2; /* Vertically center the check mark */
+  }
+  
+  /* Description Styles */
+  .remedyDescription{
+    font-size: 1.2rem;
+    color: #0c0a0a;
+    margin-top: 10px;
+    line-height: 1.5; /* Increases line spacing for readability */
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .sskinPageContainer {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+    
+    .overlayHeading {
+      font-size: 2.5rem; /* Responsive heading size */
+    }
+  
+    .remedyHeading {
+      font-size: 2rem; /* Responsive heading size */
+    }
+    
+    .remedyTitle {
+      font-size: 1.5rem; /* Responsive title size */
+    }
+  }
+  .scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scrollToTop:hover {
+    background-color: #03c829;
+  }

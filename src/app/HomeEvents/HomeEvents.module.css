@@ -1,0 +1,111 @@
+/* Full screen styling */
+.eventsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    width: 100%;
+}
+.EVimage {
+    width: 700px;
+    height: 250px; /* You can adjust the height based on your design */
+    object-fit: cover; /* Ensures the image covers the area properly */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  
+/* Light green top and bottom borders */
+.eventsHeader, .eventsFooter {
+    background-color: #04D939; /* Light green */
+    height: 20px;
+}
+/* Event slider container */
+.EVsliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+/* Buttons for navigation */
+.EVbutton {
+    background-color: #001542;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.EVbutton:hover {
+    background-color: #45a049;
+}
+/* Event card styling */
+.EVcard {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+    width: 100%;  /* Ensure the card doesn't overflow */
+}
+/* Event title styling */
+.EVtitle {
+    font-size: 2.5rem;  /* Adjust font size for mobile */
+    font-weight: bold;
+}
+/* Event date styling */
+.EVdate {
+    font-size: 1.5rem;  /* Adjust font size for mobile */
+    color: #A48650;
+}
+/* Event description styling */
+.EVdescription {
+    font-size: 1.2rem;  /* Adjust font size for mobile */
+    margin-top: 10px;
+    color: #45a049;
+}
+/* Ensure the layout is responsive and looks good on all screen sizes */
+@media (max-width: 768px) {
+    .EVsliderContainer {
+        flex-direction: column;
+        padding: 10px;
+        height: auto; /* Allow the container to grow based on content */
+    }
+    .EVbutton {
+        font-size: 16px;
+        padding: 8px;
+        margin-bottom: 10px;  /* Add some space between the buttons */
+    }
+    .EVcard {
+        margin: 10px 0;
+        padding: 15px;
+    }
+    /* Adjust font size further on very small screens */
+    .EVtitle {
+        font-size: 0.8rem;
+    }
+    .EVdate {
+        font-size: 0.9rem;
+    }
+    .EVdescription {
+        font-size: 0.9rem;
+    }
+
+    .EVimage {
+        width: 300px;
+        height: 100px; /* You can adjust the height based on your design */
+        object-fit: cover; /* Ensures the image covers the area properly */
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .eventsContainer{
+        height: fit-content;
+      }
+}

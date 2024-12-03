@@ -1,0 +1,181 @@
+.webabout1 {
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Space between content */
+    background: #A48650; /* Gradient background */
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.4s ease;
+}
+.webabouthheading {
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.webaboutdescription {
+    color: #faf4f4;
+    font-size: 16px;
+    font-family:Verdana;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.webabouthighlight {
+    color: #000000;
+    font-size: 18px;
+    font-family:Lucida;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.webabout1:hover {
+    transform: scale(1.02); /* Slight scaling on hover */
+}
+
+.webaboutleft,
+.webaboutright {
+    flex-basis: 45%; /* Adjust for content */
+    padding: 20px;
+    text-align: center; /* Center-align for better visuals */
+}
+
+.webaboutimg {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.webaboutimg:hover {
+    transform: scale(1.1); /* Larger zoom */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+}
+
+
+
+.webabout h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #4A2F15; /* Richer brown */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.webabout h2 {
+    font-size: 32px;
+    color: #03560b;
+    font-weight: 800;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.webabout p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.webaboutknowmorebtn {
+    display: inline-block;
+    background: linear-gradient(135deg,  #04D939,#001542);
+    color: #fff;
+    padding: 15px 40px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+
+
+
+  
+       
+    
+    
+    
+       
+     
+}
+
+.webaboutknowmorebtn:hover {
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+
+    .webabouthheading {
+        font-family: 'Times New Roman';
+        font-size: 40px;
+        position: relative;
+        display: inline-block;
+    }
+    .webabout1 {
+        width: auto;
+        padding: 20px; /* Reduced padding */
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: flex-start;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .webaboutright {
+        padding: 0 20px; /* Add padding to prevent text from touching edges */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .webaboutright h2{
+         display: none; 
+    }
+
+    .webaboutright p:not(:first-of-type) {
+        display: none; /* Hide all paragraphs except the first one */
+    }
+
+    .webaboutknowmorebtn {
+        display: inline-block; /* Ensure the button is always visible */
+        font-size: 1em; /* Adjusted button text size */
+        padding: 10px 25px; /* Adjusted padding */
+        margin-top: 15px; /* Space above the button */
+        border-radius: 30px; /* Rounded corners */
+    }
+}
+
+
+/* Animations */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Reset position */
+    }
+}

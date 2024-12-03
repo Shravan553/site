@@ -1,0 +1,263 @@
+/* Container for the entire history section */
+.historyContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #001542, #ffffff);
+    /* padding: 2rem 0; */
+  }
+  
+  /* Hero Section */
+  .historyHero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #001542; /* Dark Blue background */
+  }
+  
+  .historyHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* filter: brightness(50%) contrast(0.8); */
+    /* transition: transform 5s ease-in-out;
+    animation: zoomIn 20s infinite alternate; */
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  
+  .overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    text-align: center;
+    color: #04D939; /* Bright Green */
+    padding: 1rem 2rem; /* Reduced padding to move text up */
+  }
+  
+  .heroText h1 {
+    font-size: 3rem;
+    color: #f4f2f0; /* Bronze */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease;
+    padding-bottom: 20px; /* Reduced padding to bring text closer */
+  }
+  
+  .heroText p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #ffffff;
+    line-height: 1.6;
+    animation: fadeIn 3s ease;
+    padding-bottom: 50px; /* Adjusted padding to move text up */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Potato History Info Section */
+  .potatoHistoryInfos {
+    padding: 4rem 2rem;
+    background-color: #001542;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .infoCard {
+    background-color: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .infoCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .infoCard h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: #001542; /* Dark Blue */
+  }
+  
+  .infoCard p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+  }
+  
+  /* Movable Images Section */
+  .movableImagesSection {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .movableImagesGrid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  
+  .movableImageWrapper {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    transition: transform 5s ease-in-out;
+    animation: zoomIn 20s infinite alternate;
+  }
+  
+  .movableImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 5s ease-in-out, filter 0.3s ease;
+  }
+  
+  .movableImageWrapper:hover .movable-image {
+    transform: scale(1.1);
+    filter: brightness(85%);
+  }
+  
+  /* Potato History Details Section */
+  .potatoHistoryDetails {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .historyContent {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #444;
+    transition: all 0.3s ease;
+  }
+  
+  .historyContent h2 {
+    font-size: 2.6rem;
+    color: #001542; /* Dark Blue */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #A48650; /* Bronze border */
+    padding-bottom: 0.5rem;
+  }
+  
+  .historyContent h3 {
+    font-size: 1.8rem;
+    color: #001542; /* Dark Blue */
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    animation: slideIn 1.5s ease;
+  }
+  
+  .historyContent p,
+  .historyContent ul {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+  }
+  
+  .historyContent ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .historyContent ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Button Style */
+  .button {
+    background-color: #04D939; /* Bright Green */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #A48650; /* Bronze */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .historyHero {
+      height: 60vh;
+    }
+    .heroText h1 {
+      font-size: 1.8rem;
+    }
+    .heroText p {
+      font-size: 0.8rem;
+    }
+    .historyContent h2 {
+      font-size: 0.8rem;
+    }
+    .historyContent h3 {
+      font-size: 0.8rem;
+    }
+    .infoCard {
+      padding: 1.5rem;
+    }
+    .infoCard h2 {
+      font-size: 1rem;
+  
+    }
+  
+    .infoCard p {
+      font-size: 0.9rem;
+  
+    }
+  
+    .historyContent p{
+      font-size: 0.9rem;
+  
+  
+    }
+  }
+  

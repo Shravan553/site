@@ -1,0 +1,197 @@
+/* General Layout */
+
+
+
+.historyInfoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #fef9f9, #f5e1da);
+    border-radius: 10px;
+    width: auto;
+    height: 560px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-out; /* Fade in effect */
+  }
+  
+  .historyInfoSection.visible {
+    opacity: 1; /* Visible after scroll */
+  }
+  
+  /* Image Section Styling */
+  .historyImageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(80px); /* Start further down */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Ensure smooth transition */
+  }
+  
+  .historyImageSection.imageVisible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+  
+  .historyMainImage {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+  }
+  
+  .historyMainImage:hover {
+    transform: scale(1.08);
+  }
+  
+  /* Content Section Styling */
+  .historyContentSection {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(60px); /* Start further down */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Ensure smooth transition */
+  }
+  
+  .historyContentSection.contentVisible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  
+  .historyTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2d3748;
+    position: relative; /* Required for positioning the pseudo-element */
+    display: inline-block; /* Ensure the title takes only as much width as needed */
+  }
+  
+  .historyTitle::after {
+    content: '';
+    position: absolute;
+    left: 0%; /* Position the underline at the halfway point */
+    bottom: -5px; /* Position the underline just below the text */
+    width: 40%; /* Make the underline span across half of the text */
+    height: 3px; /* Thickness of the underline */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+
+  }
+  
+  .historyHighlightBar {
+    width: 50px;
+    height: 5px;
+    /* background: #b5651d; */
+    margin: 0.5rem 0 1.5rem 0;
+    border-radius: 5px;
+  }
+  
+  .historySectionText {
+    font-size: 1rem;
+    color: #2d3748;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button Styles */
+  .historyButtonContainer {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .historyButtonLearnMore {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg,  #04D939,#001542);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+
+
+   
+  }
+  
+  .historyButtonLearnMore:hover {
+  
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .historyInfoSection {
+      flex-direction: column;
+      padding: 0.1rem;
+    }
+  
+    .historyImageSection,
+    .historyContentSection {
+      width: 100%;
+    }
+  
+    .historyTitle {
+      font-size: 0.9rem;
+    }
+  
+    .historySectionText {
+      font-size: 0.8rem;
+      height: 10rem;
+      overflow: hidden;
+    }
+    .historyHighlightBar {
+      width: 50px;
+      height: 5px;
+      margin: 0.5rem 0 1.5rem 0;
+      border-radius: 5px;
+    }
+    
+    .historyButtonLearnMore {
+      font-size: 1rem;
+      padding: 0.4rem 1rem;
+    }
+  }
+  
+  /* Larger screens */
+  @media (min-width: 768px) {
+    .historyInfoSection {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  
+    .historyImageSection,
+    .historyContentSection {
+      width: 50%;
+    }
+  
+    .historyTitle {
+      font-size: 2rem;
+    }
+  
+    .historySectionText {
+      font-size: 1rem;
+    }
+  
+    .historyContentSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  

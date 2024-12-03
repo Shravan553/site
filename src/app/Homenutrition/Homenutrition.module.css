@@ -1,0 +1,188 @@
+
+
+
+
+
+
+.potatoSection {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #A48650;
+    
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-in-out;
+    /* Added opacity for better contrast */
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .potatoImageContainer {
+    position: relative;
+    height: 400px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-in-out 0.3s; /* Delay for staggered effect */
+  }
+  .visible .potatoImageContainer {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .potatoMainImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: cover;
+  }
+  
+  .potatoMainImage:hover {
+    transform: scale(1.05);
+  }
+  
+  .potatoContentWrapper {
+    margin-top: 2rem;
+
+    /* Initial state for animation */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-in-out 0.6s; /* Delay for staggered effect */
+  }
+  
+
+  .visible .potatoContentWrapper {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .potatoTitle {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .potatoGradientBar {
+    height: 0.25rem;
+    width: 4rem;
+    background: linear-gradient(90deg, rgba(0, 21, 66, 0.5) 50%, rgba(4, 217, 57, 0.5) 50%);
+    margin-bottom: 1.5rem;
+  }
+  
+  .potatoSubtitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: green;
+  }
+  
+  .potatoParagraph {
+    margin-bottom: 1rem;
+    color: black;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .potatoButtonContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .potatoButton {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    /* transition: background-color 0.3s, transform 0.3s; */
+    color: white;
+
+    background: linear-gradient(135deg,  #04D939,#001542);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* background: linear-gradient(90deg, #22ff00, #1b00b3); */
+  }
+  
+  .potatoButton:hover {
+    /* background-color: #10b981; */
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  /* Media Queries for Mobile View */
+  @media (max-width: 767px) {
+    .potatoSection {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .potatoImageContainer {
+      width: 100%;
+      height: 230px;
+      margin-bottom: 1rem;
+    }
+  
+    .mobileContent {
+      display: block;
+      font-size: 0.9rem;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .potatoContentWrapper {
+      display: none; /* Hide desktop content */
+    }
+  
+    .mobileButtonContainer {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  
+    .mobileButton {
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      color: white;
+      background: linear-gradient(90deg, #22ff00, #1b00b3);
+      text-align: center;
+    }
+  
+    .mobileButton:hover {
+      background-color: #2563eb;
+    }
+  }
+  
+  /* Media Queries for Desktop View */
+  @media (min-width: 768px) {
+    .potatoSection {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+  
+    .potatoImageContainer {
+      width: 50%;
+      padding-right: 1rem;
+    }
+  
+    .potatoContentWrapper {
+      width: 50%;
+      padding-left: 1rem;
+    }
+  
+    .mobileContent {
+      display: none; /* Hide mobile content */
+    }
+  }
+  

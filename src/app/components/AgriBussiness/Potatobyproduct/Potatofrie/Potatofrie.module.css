@@ -1,0 +1,326 @@
+/* Styling for the French Fries Nutrition Facts container */
+.friesContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+
+.friesNutritionInfo {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-right: 20px; /* Add some space between the nutrients and image */
+}
+
+.friesNutrient {
+    background-color: #A48650;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.friesNutrient p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.friesImage {
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.friesImageInfo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Space between this section and the next */
+}
+
+/* Adjust image styling */
+/* .friesImage {
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+} */
+
+/* Container for the text beside the image */
+.friesTextContainer {
+    flex: 1; /* Take remaining space */
+}
+
+.friesText {
+    font-size: 1.1rem; /* Existing styles */
+    color: #333; /* Existing styles */
+    line-height: 1.6; /* Existing styles */
+    margin-bottom: 15px; /* Existing styles */
+    padding-left: 20px;
+}
+/* .fries-image-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; 
+} */
+
+/* .fries-image {
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+} */
+
+/* Container for the text beside the image */
+/* .fries-text-container {
+    flex: 1; 
+} */
+
+.friesText {
+    font-size: 1.1rem; /* Existing styles */
+    color: #333; /* Existing styles */
+    line-height: 1.6; /* Existing styles */
+    margin-bottom: 15px; /* Existing styles */
+}
+.friesTitle {
+    color: #d2691e;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative; /* Required for positioning the ::after element */
+  }
+  
+  .friesTitle::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start the underline further to the right, after some space */
+    transform: translateX(-50%); /* Center the underline horizontally from its starting point */
+    bottom: -10px; /* Move the underline a little below the text */
+    width: 20%; /* Adjust this to control the length of the underline */
+    height: 5px; /* Height of the underline area */
+    border-bottom: 5px dotted brown; /* Dotted underline */
+
+  }
+  
+  .testimonialsSection {
+    background-color: #8B4513; /* Brown background */
+    padding: 40px 20px;
+  }
+  
+  .testimonialContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonialImage {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .testimonialImg {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .testimonialContent {
+    flex: 2;
+    padding-left: 20px;
+  }
+  
+  .testimonialTitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .testimonialText {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .testimonialButton {
+    padding: 10px 20px;
+    background-color: #A48650;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .testimonialButton:hover {
+    background-color: #8f6a3e;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonialContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonialImage {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .testimonialContent {
+      padding-left: 0;
+    }
+  
+    .testimonialTitle {
+      font-size: 1.5rem;
+    }
+  
+    .testimonialText {
+      font-size: 1rem;
+    }
+  
+    .testimonialButton {
+      font-size: 1rem;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+.friesText {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.friesNutritionInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.friesNutrient {
+    background-color:  #A48650;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.friesNutrient p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.friesBenefitsList {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.friesBenefitsList li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+
+    
+    .friesNutritionInfo {
+        grid-template-columns: 1fr;
+    }
+  
+    .friesImageInfo {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center;
+    }
+  .friesImage {
+    max-width: 300px; /* Maintain size */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between the image and text */
+}
+    
+    
+    
+    /* Styling for the nutrition facts container */
+    .friesNutritionInfo {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-right: 20px; /* Space between the nutrition facts and the image */
+    }
+    
+    .friesNutrient {
+        background-color: #ffebcd;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .friesNutrient p {
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    /* Styling for the image */
+    .friesImage {
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+        .friesNutritionSection {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .friesNutritionInfo {
+            margin-right: 0;
+        }
+    
+        .friesImage {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    
+    .friesTitle {
+        font-size: 2rem;
+    }
+
+    .friesSubtitle {
+        font-size: 1.5rem;
+    }
+    
+    .friesText {
+        font-size: 1rem;
+    }
+}
+
+
+
