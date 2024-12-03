@@ -7,7 +7,6 @@ import Head from "next/head"; // Replace Helmet with Head
 import styles from "./TypesOfPotatoes.module.css"; 
 import Footer from "../../../Footer/Footer";
 import Navbar from "../../../Navbar/NavbarTYP";// Use CSS modules for styling
-
 // Import potato images from the public directory
 const potatoImages = [
   { 
@@ -59,7 +58,6 @@ const potatoImages = [
     description: "Ideal for making delicious mashed potatoes."
   }
 ];
-
 const TypesOfPotatoes: React.FC = () => {
   return (
     <div className={styles.potatoSliderContainer}>
@@ -74,7 +72,6 @@ const TypesOfPotatoes: React.FC = () => {
         <meta property="og:image" content="/websiteimage3.jpg" />
         <meta property="og:url" content="https://www.yourwebsite.com/types-of-potatoes" />
       </Head>
-
       {/* Hero Section */}
       <div className={styles.imageContent1}>
         <Image
@@ -88,7 +85,6 @@ const TypesOfPotatoes: React.FC = () => {
           <h1 className={styles.headerTitle}>Types of Potatoes</h1>
         </div>
       </div>
-
       <section className={styles.potatoTypesSection5}>
         <div className={styles.potatoTypesContainer5}>
           <h2 className={styles.potatoTypesHeading5}></h2>
@@ -97,7 +93,6 @@ const TypesOfPotatoes: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Potato Cards */}
       <div className={styles.potatoCardsContainer}>
         {potatoImages.map((potato, index) => (
@@ -111,7 +106,7 @@ const TypesOfPotatoes: React.FC = () => {
             />
             <div className={styles.potatoCardInfo}>
               <h3>{potato.title}</h3>
-              <p>{potato.description}</p>
+              {/* <p>{potato.description}</p> */}
               <Link href={potato.link} className={styles.knowMoreBtn}>
   Learn More
 </Link>
@@ -119,7 +114,6 @@ const TypesOfPotatoes: React.FC = () => {
           </div>
         ))}
       </div>
-
       {/* Additional Content */}
       <div className={styles.additionalContent}>
         <div className={styles.centeredSection}>
@@ -128,7 +122,6 @@ const TypesOfPotatoes: React.FC = () => {
             There are more than 200 varieties of potatoes sold throughout the United States. Each of these varieties fits into one of seven potato type categories: russet, red, white, yellow, blue/purple, fingerling, and petite.
           </p>
         </div>
-
         <section className={styles.flippingCardsSection}>
         <h2>Explore Our Potato Varieties</h2>
         <div className={styles.flippingCardsContainer}>
@@ -152,7 +145,6 @@ const TypesOfPotatoes: React.FC = () => {
           ))}
         </div>
       </section>
-
         {/* New Section: Interesting Facts About Potatoes */}
         <section className={styles.potatoFactsSection}>
         <h2>Interesting Facts About Potatoes</h2>
@@ -176,8 +168,6 @@ const TypesOfPotatoes: React.FC = () => {
         </div>
       </section>
       
-
-
         {/* Potato Varieties Section */}
         {/* <section className={styles.potatoVarietiesSection1}>
           {potatoImages.map((potato, index) => (
@@ -202,11 +192,9 @@ const TypesOfPotatoes: React.FC = () => {
           ))}
         </section> */}
       </div>
-
       {/* <Scroll /> */}
       <Footer />
     </div>
   );
 };
-
 export default TypesOfPotatoes;
