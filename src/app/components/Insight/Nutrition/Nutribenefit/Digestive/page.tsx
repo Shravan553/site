@@ -8,9 +8,7 @@ import Navbar from '../../../../../Navbar/NavbarTYP';
 import Scroll from '@/app/Scroll/Scroll';
 
 // Scroll to top function
-const scrollToTop = () => {
- 
-};
+
 
 const Digestive = () => {
   useEffect(() => {
@@ -74,7 +72,7 @@ const Digestive = () => {
         </div>
       </section>
 
-      <Scroll/>
+    <Scroll/>
 
       <Footer />
     </div>

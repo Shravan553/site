@@ -11,6 +11,7 @@ import Navbar from '../../../Navbar/NavbarTYP';
 import styles from './PotatoHistory.module.css'; // Updated CSS import to Next.js module
 import Scroll from '@/app/Scroll/Scroll';
 
+
 const History = () => {
   useEffect(() => {
 
@@ -23,12 +24,7 @@ const History = () => {
   const glimps3 = '/assets/potatohistoryglimps3.jpg';
 
   // Scroll to the top function
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+ 
 
   return (
     <div className={styles.historyContainer}>
@@ -203,7 +199,7 @@ const History = () => {
       </section>
 
       {/* Scroll to Top Button */}
-     <Scroll/>
+  <Scroll/>
       <Footer />
     </div>
   );

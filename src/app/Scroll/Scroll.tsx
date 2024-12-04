@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Scroll: React.FC = () => {
   const [showButton, setShowButton] = useState<boolean>(false);
@@ -88,13 +89,13 @@ const Scroll: React.FC = () => {
             style={{ textDecoration: 'none' }}
           >
             <button style={whatsappButtonStyle}>
-              <img
+            <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" // WhatsApp SVG icon
                 alt="WhatsApp"
                 style={{ width: '20px', height: '20px', ...iconStyle }}
-              />
-              Need Help? Chat with Us
-            </button>
+                />
+                Need Help? Chat with Us
+              </button>
           </a>
         </>
       )}
