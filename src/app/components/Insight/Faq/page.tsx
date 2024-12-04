@@ -9,7 +9,7 @@ import Scroll from '@/app/Scroll/Scroll';
 
 const FAQ = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
 
   useEffect(() => {
 
@@ -35,20 +35,7 @@ const FAQ = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const toggleQuestion = (index: number) => {
     setActiveQuestion(activeQuestion === index ? null : index);
