@@ -3,12 +3,13 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from './FAQ.module.css';
-// import Scroll from '../Pages/scroll';
 import Footer from '../../../Footer/Footer';
 import Navbar from '../../../Navbar/NavbarTYP';
+import Scroll from '@/app/Scroll/Scroll';
 
 const FAQ = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,8 +35,27 @@ const FAQ = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const toggleQuestion = (index: number) => {
     setActiveQuestion(activeQuestion === index ? null : index);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const renderFAQItem = (index: number, question: string, answer: string) => (
@@ -56,7 +76,7 @@ const FAQ = () => {
 
   return (
     <div className={styles.faqContainer}>
-        <Navbar/>
+      <Navbar />
       <Head>
         <title>FAQ About Potatoes | Potato Insights</title>
         <meta
@@ -69,20 +89,14 @@ const FAQ = () => {
           property="og:description"
           content="Find answers to common questions about potatoes, their origin, benefits, nutrition, and more."
         />
-        <meta
-          property="og:image"
-          content="/assets/FAQimage1.jpg"
-        />
+        <meta property="og:image" content="/assets/FAQimage1.jpg" />
         <meta property="og:url" content="http://www.yourwebsite.com/faq" />
         <meta name="twitter:title" content="FAQ About Potatoes | Potato Insights" />
         <meta
           name="twitter:description"
           content="Find answers to common questions about potatoes, their origin, benefits, nutrition, and more."
         />
-        <meta
-          name="twitter:image"
-          content="/assets/FAQimage1.jpg"
-        />
+        <meta name="twitter:image" content="/assets/FAQimage1.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -93,8 +107,6 @@ const FAQ = () => {
           <p className={styles.underTextAlter}>
             Find answers to the most common questions about potatoes.
           </p>
-          
-         
         </div>
       </section>
 
@@ -102,7 +114,6 @@ const FAQ = () => {
       <section className={styles.faqContent}>
         <h2>Frequently Asked Questions</h2>
 
-        {/* FAQ: About Potatoes */}
         <div className={styles.faqSection}>
           <h2>FAQ About Potatoes</h2>
           {renderFAQItem(
@@ -228,13 +239,13 @@ const FAQ = () => {
           {/* Add more FAQ items as needed */}
         </div>
 
-   
       </section>
 
-      {/* <Scroll /> */}
+    
+     <Scroll/>
+
       <Footer />
     </div>
-    
   );
 };
 

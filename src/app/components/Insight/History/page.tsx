@@ -9,6 +9,7 @@ import Image from 'next/image';
 
 import Navbar from '../../../Navbar/NavbarTYP';
 import styles from './PotatoHistory.module.css'; // Updated CSS import to Next.js module
+import Scroll from '@/app/Scroll/Scroll';
 
 const History = () => {
   useEffect(() => {
@@ -21,19 +22,39 @@ const History = () => {
   const glimps2 = '/assets/potatohistoryglimps2.jpg';
   const glimps3 = '/assets/potatohistoryglimps3.jpg';
 
+  // Scroll to the top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className={styles.historyContainer}>
-        <Navbar/>
+      <Navbar />
       <Head>
         <title>The History of Potatoes</title>
-        <meta name="description" content="Explore the fascinating history of potatoes, from their origins in South America to their global significance today." />
-        <meta name="keywords" content="Potato history, Potato origins, South America, European cultivation, Global food history" />
+        <meta
+          name="description"
+          content="Explore the fascinating history of potatoes, from their origins in South America to their global significance today."
+        />
+        <meta
+          name="keywords"
+          content="Potato history, Potato origins, South America, European cultivation, Global food history"
+        />
         <meta property="og:title" content="The History of Potatoes" />
-        <meta property="og:description" content="Explore the fascinating history of potatoes, from their origins in South America to their global significance today." />
+        <meta
+          property="og:description"
+          content="Explore the fascinating history of potatoes, from their origins in South America to their global significance today."
+        />
         <meta property="og:image" content={historyImage} />
         <meta property="og:url" content="https://www.yoursite.com/potato-history" />
         <meta name="twitter:title" content="The History of Potatoes" />
-        <meta name="twitter:description" content="Explore the fascinating history of potatoes, from their origins in South America to their global significance today." />
+        <meta
+          name="twitter:description"
+          content="Explore the fascinating history of potatoes, from their origins in South America to their global significance today."
+        />
         <meta name="twitter:image" content={historyImage} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -41,21 +62,16 @@ const History = () => {
       {/* Hero Section */}
       <section className={styles.historyHero}>
         <div className={styles.heroImage}>
-          
-
-<Image 
-  src={historyImage} 
-  alt="Olden History" 
-  className={styles.historyHeroImg} 
-  layout="responsive" 
-  width={500} 
-  height={300}
-/>
+          <Image
+            src={historyImage}
+            alt="Olden History"
+            className={styles.historyHeroImg}
+            layout="responsive"
+            width={500}
+            height={300}
+          />
           <div className={styles.overlay}>
-            <div className={styles.heroText}>
-            
-            
-            </div>
+            <div className={styles.heroText}></div>
           </div>
         </div>
       </section>
@@ -67,55 +83,60 @@ const History = () => {
         <div className={styles.infoCard}>
           <h2>A Rich Journey Through Time</h2>
           <p>
-            Potatoes have an ancient legacy that dates back to around 8,000 years ago in the Andean region of South America. Indigenous farmers first cultivated these humble tubers in the mountains of Peru and Bolivia, recognizing their nutritional value and versatility. 
-            In the 16th century, Spanish explorers brought potatoes to Europe, where they quickly spread, transforming into a staple food that fueled population growth. Today, potatoes are cherished worldwide, a testament to their rich history and essential role in global agriculture and cuisine.
+            Potatoes have an ancient legacy that dates back to around 8,000 years ago in the Andean region of South
+            America. Indigenous farmers first cultivated these humble tubers in the mountains of Peru and Bolivia,
+            recognizing their nutritional value and versatility. In the 16th century, Spanish explorers brought potatoes
+            to Europe, where they quickly spread, transforming into a staple food that fueled population growth. Today,
+            potatoes are cherished worldwide, a testament to their rich history and essential role in global agriculture
+            and cuisine.
           </p>
         </div>
       </section>
 
       <section className={styles.movableImagesSection}>
-  <div>
-    <center><b>Potato Glimpse</b></center>
-    <br />
-    <div className={styles.movableImagesGrid}>
-      <div className={styles.movableImageWrapper}>
-        <Image 
-          src={glimps1} 
-          alt="Potato History 1" 
-          className={styles.movableImage}
-          layout="responsive"
-          width={500}
-          height={300}
-        />
-      </div>
-      <div className={styles.movableImageWrapper}>
-        <Image 
-          src={glimps2} 
-          alt="Potato History 2" 
-          className={styles.movableImage}
-          layout="responsive"
-          width={500}
-          height={300}
-        />
-      </div>
-      <div className={styles.movableImageWrapper}>
-        <Image 
-          src={glimps3} 
-          alt="Potato History 3" 
-          className={styles.movableImage}
-          layout="responsive"
-          width={500}
-          height={300}
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
+        <div>
+          <center>
+            <b>Potato Glimpse</b>
+          </center>
+          <br />
+          <div className={styles.movableImagesGrid}>
+            <div className={styles.movableImageWrapper}>
+              <Image
+                src={glimps1}
+                alt="Potato History 1"
+                className={styles.movableImage}
+                layout="responsive"
+                width={500}
+                height={300}
+              />
+            </div>
+            <div className={styles.movableImageWrapper}>
+              <Image
+                src={glimps2}
+                alt="Potato History 2"
+                className={styles.movableImage}
+                layout="responsive"
+                width={500}
+                height={300}
+              />
+            </div>
+            <div className={styles.movableImageWrapper}>
+              <Image
+                src={glimps3}
+                alt="Potato History 3"
+                className={styles.movableImage}
+                layout="responsive"
+                width={500}
+                height={300}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Potato History Detailed Section */}
       <section className={styles.potatoHistoryDetails}>
-        <div className={styles.historyContent}>
+      <div className={styles.historyContent}>
           <h2>The Journey of Potatoes: From Ancient Cultivation to Global Staple</h2>
           
           <p>
@@ -177,8 +198,12 @@ const History = () => {
             From humble beginnings in the Andes to becoming a global staple, the potatos journey is a testament to its significance in human history. Today, potatoes continue to play an essential role in global food security and culinary traditions, demonstrating their lasting impact on societies worldwide.
           </p>
         </div>
+      
+        {/* Your detailed history content remains the same */}
       </section>
 
+      {/* Scroll to Top Button */}
+     <Scroll/>
       <Footer />
     </div>
   );

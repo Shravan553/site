@@ -6,6 +6,7 @@ import Footer from "../../Footer/Footer";
 import NavbarTYP from "../../Navbar/NavbarTYP";
 import Head from "next/head";
 import Image from "next/image";  // Import Image component
+import Scroll from "@/app/Scroll/Scroll";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -150,7 +151,10 @@ const About: React.FC = () => {
             </div>
           </div>
         </section>
-
+        <button onClick={scrollToTop} className={styles.scrollToTop}>
+        Scroll to Top
+      </button>
+      <Scroll/>
         <Footer />
       </div>
     </div>

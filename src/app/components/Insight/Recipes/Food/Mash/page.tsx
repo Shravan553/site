@@ -8,6 +8,7 @@ import styles from './mash.module.css';
 import Navbar from '../../../../../Navbar/NavbarTYP';
 import Footer from '../../../../../Footer/Footer';
 import Link from 'next/link';
+import Scroll from '@/app/Scroll/Scroll';
 const Garlic = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top when component mounts
@@ -144,6 +145,7 @@ const Garlic = () => {
           <li>Stir in chopped parsley, season with salt to taste, and serve hot.</li>
         </motion.ol>
       </section>
+      <Scroll/>
       <Footer/>
     </div>
   );

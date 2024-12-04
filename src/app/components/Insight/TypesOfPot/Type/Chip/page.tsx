@@ -6,6 +6,7 @@ import Head from 'next/head';
 import styles from './chip.module.css'; // Import CSS module
 import Footer from '../../../../../Footer/Footer';
 import Navbar from '../../../../../Navbar/NavbarTYP'; // Update path as per your structure
+import Scroll from '@/app/Scroll/Scroll';
 
 const Chip: React.FC = () => {
   useEffect(() => {
@@ -134,7 +135,7 @@ const Chip: React.FC = () => {
           </div>
         </div>
       </section>
-
+<Scroll/>
       <Footer />
     </div>
   );

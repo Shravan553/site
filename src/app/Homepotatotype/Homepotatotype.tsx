@@ -72,7 +72,7 @@ const Homepotatotype: React.FC = () => {
           favored for their smooth texture and delicious flavor, perfect for a
           range of culinary applications.
         </p>
-        <Link href="/components/Insight/TypesOfPot/" className={styles.knowMoreBtn}>
+        <Link href="/components/Insight/TypesOfPot/" className={styles.knowMoreBtnSt}>
           Know More
         </Link>
       </div>

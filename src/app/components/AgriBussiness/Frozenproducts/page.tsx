@@ -7,6 +7,7 @@ import styles from './Frozenproducts.module.css'; // Assuming you are using CSS 
 import Footer from '../../../Footer/Footer';
 import Image from 'next/image';
 import NavbarTYP from "../../../Navbar/NavbarTYP"
+import Scroll from '@/app/Scroll/Scroll';
 
 // Defining the product type
 interface Product {
@@ -26,6 +27,9 @@ const products: Product[] = [
   { name: 'Aloo Tikki', image: '/assets/tikki.jpg', description: 'Traditional, spiced aloo tikkis.' },
   { name: 'Veg Burger Patty', image: '/assets/veg.jpg', description: 'Juicy veg patties, perfect for burgers.' },
 ];
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const Frozenproducts = () => {
   return (
@@ -86,7 +90,7 @@ const Frozenproducts = () => {
           </div>
         ))}
       </div>
-
+   <Scroll/>
       <Footer />
     </div>
   );

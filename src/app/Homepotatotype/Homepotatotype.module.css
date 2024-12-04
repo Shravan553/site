@@ -122,7 +122,7 @@
 }
 
 /* Know More Button */
-.knowMoreBtn {
+.knowMoreBtnSt {
   display: inline-block;
   color: #fff;
   padding: 12px 35px;
@@ -139,7 +139,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.knowMoreBtn:hover {
+.knowMoreBtnSt:hover {
 
   background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
     transform: translateY(-3px) scale(1.05);

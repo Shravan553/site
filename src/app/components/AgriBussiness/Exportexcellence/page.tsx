@@ -6,13 +6,10 @@ import Footer from '../../../Footer/Footer';
 import Nav from '../../../Navbar/NavbarTYP';
 import styles from './Export.module.css';
 import Image from 'next/image';
+import Scroll from '@/app/Scroll/Scroll';
 
 
 const Export: React.FC = () => {
-  useEffect(() => {
-    // Scroll to top on component mount
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
 
  
 
@@ -162,7 +159,7 @@ const Export: React.FC = () => {
 />
           </div>
         </div>
-
+ <Scroll/>
         <Footer />
       </div>
     </div>

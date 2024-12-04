@@ -69,6 +69,14 @@
   -webkit-text-fill-color: transparent;
   animation: textFade 1.5s ease-in-out;
 }
+.faqSection h3{
+  color: white;
+
+}
+.faqSection h3:hover {
+  color: black;
+}
+
 
 .underTextAlter {
   font-size: 1.2rem;
@@ -194,6 +202,62 @@
     padding: 12px;
     animation: fadeInScale 0.6s ease;
   }
+  /* Animation Keyframes */
+@keyframes textFade {
+  from {
+    opacity: 0; /* Start with invisible */
+    transform: translateY(-10px); /* Slightly move up */
+  }
+  to {
+    opacity: 1; /* End with fully visible */
+    transform: translateY(0); /* Original position */
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hoverGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 }
 
 @media (max-width: 480px) {
@@ -226,4 +290,60 @@
     padding: 10px;
     animation: fadeInScale 0.6s ease;
   }
+  /* Animation Keyframes */
+@keyframes textFade {
+  from {
+    opacity: 0; /* Start with invisible */
+    transform: translateY(-10px); /* Slightly move up */
+  }
+  to {
+    opacity: 1; /* End with fully visible */
+    transform: translateY(0); /* Original position */
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hoverGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 }

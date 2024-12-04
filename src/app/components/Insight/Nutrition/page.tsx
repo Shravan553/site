@@ -38,7 +38,9 @@ const benefitsData: Benefit[] = [
   { title: 'Benefits to the Immune System', image: '/assets/im34.webp', link: '/components/Insight/Nutrition/Nutribenefit/Imune' },
   { title: 'Digestive Health', image: '/assets/di23.webp', link: '/components/Insight/Nutrition/Nutribenefit/Digestive' },
 ];
-
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 const NutritionalFacts = () => {
   return (
     <div className={styles.nutriContainer}>
@@ -48,7 +50,7 @@ const NutritionalFacts = () => {
       <section className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
           <Image 
-            src="/assets/websiteimage3.jpg" 
+            src="/assets/jh.png" 
             alt="Hero" 
             className={styles.heroImage} 
             width={500} 
@@ -139,7 +141,9 @@ const NutritionalFacts = () => {
           </div>
         </div>
       </section>
-
+      <button onClick={scrollToTop} className={styles.scrollToTop}>
+        Scroll to Top
+      </button>
       <Footer />
     </div>
   );

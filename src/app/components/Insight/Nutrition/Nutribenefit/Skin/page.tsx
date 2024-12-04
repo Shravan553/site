@@ -5,6 +5,7 @@ import Image from 'next/image'; // Import Image from Next.js
 import styles from './skin.module.css'; // CSS module for styles
 import Footer from '../../../../../Footer/Footer';
 import Navbar from '../../../../../Navbar/NavbarTYP';
+import Scroll from '@/app/Scroll/Scroll';
 
 const Skin = () => {
   useEffect(() => {
@@ -114,10 +115,7 @@ const Skin = () => {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <button onClick={scrollToTop} className={styles.scrollToTop}>
-        Scroll to Top
-      </button>
+ <Scroll/>
 
       <Footer />
     </div>

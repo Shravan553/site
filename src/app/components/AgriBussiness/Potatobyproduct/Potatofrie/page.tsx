@@ -7,6 +7,7 @@ import Nav from "../../../../Navbar/NavbarTYP";
 import styles from "./Potatofrie.module.css";
 import Image from "next/image"; // Import Image from next/image
 import Link from 'next/link';
+import Scroll from "@/app/Scroll/Scroll";
 
 
 const Fri: React.FC = () => {
@@ -156,7 +157,7 @@ POTATO BY PRODUCTS , like potato flour, have revolutionized my baking. It gives 
           ))}
         </ul>
       </div>
-
+<Scroll/>
       {/* Footer Section */}
       <Footer />
     </section>

@@ -6,6 +6,7 @@ import Head from 'next/head';
 import styles from './Red.module.css'; // Updated CSS module import
 import Footer from '../../../../../Footer/Footer';
 import Navbar from '../../../../../Navbar/NavbarTYP'; // Ensure the path matches your file structure
+import Scroll from '@/app/Scroll/Scroll';
 
 const Red: React.FC = () => {
   useEffect(() => {
@@ -146,7 +147,7 @@ const Red: React.FC = () => {
           </div>
         </div>
       </section>
-
+<Scroll/>
       <Footer />
     </div>
   );

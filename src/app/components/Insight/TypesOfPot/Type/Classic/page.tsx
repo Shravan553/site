@@ -6,6 +6,7 @@ import Head from 'next/head';
 import styles from './russet.module.css'; // Import CSS module
 import Footer from '../../../../../Footer/Footer';
 import Navbar from '../../../../../Navbar/NavbarTYP'; // Update path as per your structure
+import Scroll from '@/app/Scroll/Scroll';
 
 const Russet: React.FC = () => {
   useEffect(() => {
@@ -147,7 +148,7 @@ const Russet: React.FC = () => {
           </div>
         </div>
       </section>
-
+<Scroll/>
       <Footer />
     </div>
   );

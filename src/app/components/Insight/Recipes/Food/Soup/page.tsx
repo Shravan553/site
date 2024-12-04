@@ -7,6 +7,7 @@ import styles from './Soup.module.css';
 import Navbar from '../../../../../Navbar/NavbarTYP';
 import Footer from '../../../../../Footer/Footer';
 import Link from 'next/link';
+import Scroll from '@/app/Scroll/Scroll';
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -199,9 +200,7 @@ const Soup = () => {
         </ol>
       </section>
 
-      <button onClick={scrollToTop} className={styles.scrollToTop}>
-        Scroll to Top
-      </button>
+    <Scroll/>
       <Footer/>
     </div>
   );

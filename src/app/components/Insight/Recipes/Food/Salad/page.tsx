@@ -8,6 +8,7 @@ import styles from "./salad.module.css";
 import Navbar from '../../../../../Navbar/NavbarTYP';
 import Footer from '../../../../../Footer/Footer';
 import Link from "next/link";
+import Scroll from "@/app/Scroll/Scroll";
 
  // Use module styles
 
@@ -180,6 +181,7 @@ const Salad: React.FC = () => {
           ))}
         </motion.ol>
       </section>
+      <Scroll/>
       <Footer/>
     </div>
   );

@@ -183,7 +183,7 @@
   
   /* View Recipe Button Styles */
   .viewRecipeButton {
-    background-color: #D28F2C; /* Golden color */
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
     color: #fff; /* White text */
     padding: 10px 20px;
     border: none;
@@ -192,6 +192,12 @@
     margin-top: 10px; /* Space between title and button */
     transition: background-color 0.3s ease; /* Smooth background change */
   }
+
+  .viewRecipeButton:hover{
+  background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+  transform: translateY(-3px) scale(1.05);
+  }
+
    .recipesSection {
     padding: 10px;
     height: auto;

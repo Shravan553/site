@@ -6,10 +6,11 @@ import Head from "next/head";
 import styles from "./kyati.module.css"; // Importing CSS module
 import Footer from "../../../../../Footer/Footer";
 import Navbar from "../../../../../Navbar/NavbarTYP"; // Assuming Footer is in the same structure
+import Scroll from "@/app/Scroll/Scroll";
 
 const Yellow: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when component mounts
+
   }, []);
 
   return (
@@ -146,6 +147,7 @@ const Yellow: React.FC = () => {
           </div>
         </div>
       </section>
+  <Scroll/>
       <Footer />
     </div>
   );

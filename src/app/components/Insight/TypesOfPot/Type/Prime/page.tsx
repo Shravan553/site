@@ -8,6 +8,7 @@ import Navbar from '../../../../../Navbar/NavbarTYP';
 
 // Import CSS module
 import styles from './Finger.module.css';
+import Scroll from '@/app/Scroll/Scroll';
 
 const Finger: React.FC = () => {
   useEffect(() => {
@@ -146,7 +147,7 @@ const Finger: React.FC = () => {
     </div>
   </div>
 </section>
-
+<Scroll/>
       <Footer />
     </div>
   );

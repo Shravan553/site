@@ -8,6 +8,7 @@ import styles from "./rost.module.css";
 import Navbar from "../../../../../Navbar/NavbarTYP";
 import Footer from "../../../../../Footer/Footer";
 import Link from "next/link";
+import Scroll from "@/app/Scroll/Scroll";
 
 const Rost: React.FC = () => {
   useEffect(() => {
@@ -181,6 +182,7 @@ const Rost: React.FC = () => {
           ))}
         </motion.ol>
       </section>
+      <Scroll/>
       <Footer/>
     </div>
   );

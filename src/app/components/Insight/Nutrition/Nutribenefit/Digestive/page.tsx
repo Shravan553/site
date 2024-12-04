@@ -5,6 +5,7 @@ import Image from 'next/image'; // Use Next.js's Image component for optimized i
 import styles from './digestive.module.css'; // Scoped styles import
 import Footer from '../../../../../Footer/Footer';
 import Navbar from '../../../../../Navbar/NavbarTYP';
+import Scroll from '@/app/Scroll/Scroll';
 
 // Scroll to top function
 const scrollToTop = () => {
@@ -73,10 +74,7 @@ const Digestive = () => {
         </div>
       </section>
 
-      {/* Scroll to Top Button */}
-      <button onClick={scrollToTop} className={styles.scrollToTop}>
-        Scroll to Top
-      </button>
+      <Scroll/>
 
       <Footer />
     </div>

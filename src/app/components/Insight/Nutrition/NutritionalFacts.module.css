@@ -269,7 +269,8 @@
   
   .heroTitle {
     font-size: 2.5rem; /* Adjust size as needed */
-    z-index: 3; /* Text stays on top */
+    z-index: 3; 
+    padding-top: 70px;/* Text stays on top */
   }
   
   .heroSubtitle {
@@ -502,7 +503,7 @@
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
-    background-color: #4CAF50; /* Green background */
+    background: linear-gradient(135deg,  #04D939,#001542);
     color: white; /* White text */
     text-decoration: none; /* No underline */
     border-radius: 5px; /* Rounded corners */
@@ -510,7 +511,8 @@
   }
   
   .benefitButton:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background: linear-gradient(135deg, #001542, #04D939); /* Invert gradient */
+    transform: translateY(-3px) scale(1.05);
   }
   
   
@@ -585,6 +587,14 @@
       width: 100%; /* Full width for benefit cards on mobile */
       height: auto; /* Auto height for variable content */
     }
+    .heroOverlay {
+      position: absolute;
+      top: 40%; /* Decrease the percentage to move the title higher */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
   }
   
   /* Additional small screen adjustments */
@@ -608,10 +618,19 @@
     .heroSubtitle {
       font-size: 1rem; /* Adjusted subtitle size */
     }
+    .heroOverlay {
+      position: absolute;
+      top: 40%; /* Decrease the percentage to move the title higher */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
   
     .benefitButton {
       padding: 10px 20px;
       font-size: 0.9rem;
+      background: linear-gradient(135deg,  #04D939,#001542);
     }
   }
   

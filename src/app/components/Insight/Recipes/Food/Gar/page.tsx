@@ -6,11 +6,17 @@ import Image from 'next/image';
 import Head from 'next/head';
 import styles from './Garlic.module.css';
 import Link from 'next/link';
+import Scroll from '@/app/Scroll/Scroll';
 
 const Garlic = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top when component mounts
   }, []);
+
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className={styles.recipePageContainer1}>
@@ -40,40 +46,40 @@ const Garlic = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <section className={styles.friNav}>
-      <div className={styles.friNavTitle}>Potato Recipes</div>
-      <ul className={styles.friNavList}>
-        <li>
-          <Link href="/components/Insight/Recipes/Food/Fries" className={styles.friNavItem}>
-            French Fries
-          </Link>
-        </li>
-        <li>
-          <Link href="/components/Insight/Recipes/Food/Rost" className={styles.friNavItem}>
-            Roasted Potato
-          </Link>
-        </li>
-        <li>
-          <Link href="/components/Insight/Recipes/Food/Gar" className={styles.friNavItem}>
-            Potato Garlic
-          </Link>
-        </li>
-        <li>
-          <Link href="/components/Insight/Recipes/Food/Mash" className={styles.friNavItem}>
-            Mashed Potato
-          </Link>
-        </li>
-        <li>
-          <Link href="/components/Insight/Recipes/Food/Salad" className={styles.friNavItem}>
-            Potato Salad
-          </Link>
-        </li>
-        <li>
-          <Link href="/components/Insight/Recipes/Food/Soup" className={styles.friNavItem}>
-            Potato Soup
-          </Link>
-        </li>
-      </ul>
-    </section>
+        <div className={styles.friNavTitle}>Potato Recipes</div>
+        <ul className={styles.friNavList}>
+          <li>
+            <Link href="/components/Insight/Recipes/Food/Fries" className={styles.friNavItem}>
+              French Fries
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/Insight/Recipes/Food/Rost" className={styles.friNavItem}>
+              Roasted Potato
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/Insight/Recipes/Food/Gar" className={styles.friNavItem}>
+              Potato Garlic
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/Insight/Recipes/Food/Mash" className={styles.friNavItem}>
+              Mashed Potato
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/Insight/Recipes/Food/Salad" className={styles.friNavItem}>
+              Potato Salad
+            </Link>
+          </li>
+          <li>
+            <Link href="/components/Insight/Recipes/Food/Soup" className={styles.friNavItem}>
+              Potato Soup
+            </Link>
+          </li>
+        </ul>
+      </section>
       <section className={styles.heroSection1}>
         <motion.div
           className={styles.heroContent1}
@@ -140,6 +146,7 @@ const Garlic = () => {
           <li>Pour in vegetable broth, bring to a boil, then reduce heat and simmer.</li>
           <li>Stir in chopped parsley, season with salt to taste, and serve hot.</li>
         </motion.ol>
+      <Scroll/>
       </section>
     </div>
   );

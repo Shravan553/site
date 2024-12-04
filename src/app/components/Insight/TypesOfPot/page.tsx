@@ -7,6 +7,7 @@ import Head from "next/head"; // Replace Helmet with Head
 import styles from "./TypesOfPotatoes.module.css"; 
 import Footer from "../../../Footer/Footer";
 import Navbar from "../../../Navbar/NavbarTYP";// Use CSS modules for styling
+import Scroll from "@/app/Scroll/Scroll";
 // Import potato images from the public directory
 const potatoImages = [
   { 
@@ -107,7 +108,7 @@ const TypesOfPotatoes: React.FC = () => {
             <div className={styles.potatoCardInfo}>
               <h3>{potato.title}</h3>
               {/* <p>{potato.description}</p> */}
-              <Link href={potato.link} className={styles.knowMoreBtn}>
+              <Link href={potato.link} className={styles.knowMoreBtnSt}>
   Learn More
 </Link>
             </div>
@@ -137,7 +138,7 @@ const TypesOfPotatoes: React.FC = () => {
                   <div className={styles.cardContent}>
                     <h3>{potato.title}</h3>
                     <p>{potato.description}</p>
-                    <Link href={potato.link} className={styles.knowMoreBtn}>Learn More</Link>
+                    <Link href={potato.link} className={styles.knowMoreBtnSt}>Learn More</Link>
                   </div>
                 </div>
               </div>
@@ -193,6 +194,7 @@ const TypesOfPotatoes: React.FC = () => {
         </section> */}
       </div>
       {/* <Scroll /> */}
+      <Scroll/>
       <Footer />
     </div>
   );

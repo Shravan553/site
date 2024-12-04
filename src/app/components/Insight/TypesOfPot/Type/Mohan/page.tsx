@@ -6,6 +6,7 @@ import Head from "next/head";
 import styles from "./yellow.module.css"; // Importing CSS module
 import Footer from "../../../../../Footer/Footer";
 import Navbar from "../../../../../Navbar/NavbarTYP"; // Assuming Footer is in the same structure
+import Scroll from "@/app/Scroll/Scroll";
 
 const Yellow: React.FC = () => {
   useEffect(() => {
@@ -129,6 +130,7 @@ const Yellow: React.FC = () => {
           </div>
         </div>
       </section>
+      <Scroll/>
       <Footer />
     </div>
   );

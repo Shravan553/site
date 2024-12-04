@@ -7,15 +7,19 @@ import Image from 'next/image';
 import Footer from '../../../Footer/Footer';
 import NavbarTYP from '../../../Navbar/NavbarTYP';
 
-// import Scroll from './Scroll';
 import styles from './Supplychain.module.css';
 import { FaTruck, FaUsers, FaClock } from 'react-icons/fa';
+import Scroll from '@/app/Scroll/Scroll';
 
 const SupplyChain: React.FC = () => {
   useEffect(() => {
     // Scroll to top when the component mounts
     window.scrollTo(0, 0);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className={styles.supplyChainWrapper}>
@@ -45,37 +49,24 @@ const SupplyChain: React.FC = () => {
         <meta name="twitter:image" content="/supplychainwebsiteimage1.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-<NavbarTYP/>
-{/* <div className={}>
-  <Image
-    src="/assets/supplychainwebsiteimage1.png"
-    alt="Potato Supply Chain Header"
-    layout="fill" // Stretches image to fill parent
-    objectFit="cover" // Ensures proper scaling
-    className={styles.headerImages1}
-  />
-  <h1 className={styles.headerTitles1}>Potato Supply Chain</h1>
-</div> */}
 
-<section className={styles.supplyChainHeader}>
-       
+      <NavbarTYP />
 
-<Image
-         src="/assets/supplychainwebsiteimage1.png"
+      <section className={styles.supplyChainHeader}>
+        <Image
+          src="/assets/supplychainwebsiteimage1.png"
           alt="Potato Supply Chain Header"
           width={1200}
           height={800}
           className={styles.headerImages}
-
         />
-          <h1 className={styles.headerTitles}>Potato Supply Chain</h1>
-          <button
-            className={styles.contactButton}
-            onClick={() => (window.location.href = '/components/Contact/')}
-          >
-            Get in Touch with Us
-          </button>
-         
+        <h1 className={styles.headerTitles}>Potato Supply Chain</h1>
+        <button
+          className={styles.contactButton}
+          onClick={() => (window.location.href = '/components/Contact/')}
+        >
+          Get in Touch with Us
+        </button>
       </section>
 
       {/* Supply Chain Meaning Section */}
@@ -122,7 +113,6 @@ const SupplyChain: React.FC = () => {
       <section className={styles.agpotatoInfo}>
         <div className={`${styles.infoBox} ${styles.missionBox}`}>
           <h3><b>Sustainability Efforts</b></h3>
-          <br></br>
           <p>
             We prioritize eco-friendly practices in every stage, from water conservation
             and soil health to waste reduction. Our goal is to cultivate potatoes in a way
@@ -131,7 +121,6 @@ const SupplyChain: React.FC = () => {
         </div>
         <div className={`${styles.infoBox} ${styles.opportunitiesBox}`}>
           <h3><b>Business Opportunities</b></h3>
-          <br></br>
           <p>
             We offer flexible supply options tailored to meet diverse needs, ensuring
             competitive pricing and high-quality products for food manufacturers, retailers,
@@ -145,24 +134,26 @@ const SupplyChain: React.FC = () => {
         {
           title: 'Potato Sourcing',
           content:
-            'We proudly source our potatoes directly from local farmers, ensuring that each batch is not only fresh but also of the highest quality. By maintaining these direct relationships with the farmers, we can support local agriculture, strengthen communities, and provide our customers with potatoes that are harvested at their peak ripeness. This commitment to quality and sustainability means that every potato we deliver is a product of care, precision, and a deep respect for the environment and those who grow our food.',
+            'We proudly source our potatoes directly from local farmers, ensuring that each batch is not only fresh but also of the highest quality.',
           image: '/assets/Gimage13.jpeg',
         },
         {
           title: 'Cold Storage',
-          content:'Our advanced, state-of-the-art cold storage facilities are meticulously engineered to maintain the perfect temperature and humidity levels, ensuring that the quality, freshness, and taste of our potatoes are preserved at their peak. Through this careful, controlled environment, we guarantee that every potato reaches our customers in its best condition, as if it were just harvested.',
+          content:
+            'Our advanced cold storage facilities ensure that the quality and freshness of our potatoes are preserved at their peak.',
           image: '/assets/Gimage9.jpeg',
         },
         {
           title: 'Prepackaging',
           content:
-'Our potatoes are meticulously pre-packaged to meet the specific needs and requirements of our customers, ensuring both convenience and precision in every order. With a wide range of flexible packaging options, we are able to cater to the diverse needs of retail stores, wholesalers, and institutional buyers. Whether you require bulk quantities or smaller, customized packages, we ensure that each order is carefully tailored to meet your exact specifications, maintaining the highest standards of quality and efficiency in every delivery.',          image: '/assets/yellow.jpg',
+            'Our potatoes are meticulously pre-packaged to meet the specific needs and requirements of our customers.',
+          image: '/assets/yellow.jpg',
         },
         {
           title: 'Retail & Consumption',
           content:
-'Potatoes are not only sold in stores but also served in a variety of delicious dishes at restaurants. At AGPotato, we are committed to ensuring that our potatoes reach consumers at their peak quality, whether they are being sold at retail outlets or carefully prepared and included in gourmet dishes. By maintaining strict quality control from farm to table, we guarantee that every potato delivers the fresh, natural flavor and texture that our customers expect.',       
-   image: '/assets/slice.jpg',
+            'Potatoes are sold in stores and served in a variety of delicious dishes at restaurants, ensuring fresh quality.',
+          image: '/assets/slice.jpg',
         },
       ].map((section, index) => (
         <section className={styles.csSection} key={index}>
@@ -184,13 +175,13 @@ const SupplyChain: React.FC = () => {
         <div className={styles.csContent}>
           <h2>Logistics & Transportation</h2>
           <p>
-          Our logistics and transportation services are designed to ensure the seamless and efficient movement of potatoes at every stage of the supply chain. From farm to warehouse to retail and restaurant, we prioritize speed, reliability, and quality preservation. With a network of carefully managed routes and temperature-controlled transportation, we ensure that our potatoes arrive fresh and in optimal condition, ready for delivery to customers on time.
+            Our logistics and transportation services ensure the seamless and efficient movement of potatoes.
           </p>
-          
         </div>
       </section>
 
-      {/* <Scroll /> */}
+  <Scroll/>
+
       <Footer />
     </div>
   );

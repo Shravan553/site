@@ -8,6 +8,7 @@ import styles from './Fries.module.css';
 import Navbar from '../../../../../Navbar/NavbarTYP';
 import Link from 'next/link';
 import Image from 'next/image'; // Importing Image from Next.js
+import Scroll from '@/app/Scroll/Scroll';
 
 const Fries: React.FC = () => {
   useEffect(() => {
@@ -22,6 +23,11 @@ const Fries: React.FC = () => {
   const saltImage = '/assets/salt.png';
   const ketchupImage = '/assets/ket.png';
   const mayoImage = '/assets/mo.png';
+
+  // Function to scroll to top of the page
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className={styles.frirecipePageContainer}>
@@ -126,8 +132,7 @@ const Fries: React.FC = () => {
             { img: oilImage, text: 'Oil for frying' },
             { img: saltImage, text: 'Salt and pepper for seasoning' },
             { img: ketchupImage, text: 'Ketchup (optional for serving)' },
-            { img: mayoImage, text: 'Mayonnaise (optional for serving)' }]
-            .map((item, index) => (
+            { img: mayoImage, text: 'Mayonnaise (optional for serving)' }].map((item, index) => (
               <motion.div
                 key={index}
                 className={styles.friingredientCard}
@@ -165,6 +170,8 @@ const Fries: React.FC = () => {
           <li>Serve hot with ketchup or mayonnaise.</li>
         </motion.ol>
       </section>
+
+<Scroll/>
 
       {/* Footer */}
       <Footer />

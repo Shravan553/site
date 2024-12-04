@@ -7,6 +7,7 @@ import Nav from "../../../../Navbar/NavbarTYP";
 import Image from "next/image"; // Import Image from next/image
 import styles from "./Potatomilk.module.css";
 import Link from 'next/link';
+import Scroll from "@/app/Scroll/Scroll";
 
 
 const scrollToTop = () => {
@@ -159,7 +160,7 @@ POTATO BY PRODUCTS , like potato flour, have revolutionized my baking. It gives 
           </div>
         ))}
       </div>
-
+<Scroll/>
       <Footer />
     </section>
   );

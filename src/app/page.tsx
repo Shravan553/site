@@ -15,6 +15,7 @@ import HomeEvents from "./HomeEvents/HomeEvents";
 import Footer from "./Footer/Footer";
 import HomeWorld from "./HomeWorld/HomeWorld";
 import HomeAbout from "./HomeAbout/page";
+import Scroll from "./Scroll/Scroll";
 
 export default function Home() {
   return (
@@ -61,7 +62,7 @@ export default function Home() {
         <Title subTitle='Our Events' title='Connecting Communities Through Memorable Events' />
         <HomeEvents />
       </div>
-
+<Scroll/>
       <Footer />
     </div>
   );

@@ -23,7 +23,7 @@
   .historyHeroImg {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit:fill;
     /* filter: brightness(50%) contrast(0.8); */
     /* transition: transform 5s ease-in-out;
     animation: zoomIn 20s infinite alternate; */
@@ -110,22 +110,26 @@
     text-align: justify;
   }
   
-  /* Movable Images Section */
   .movableImagesSection {
     width: 100%;
     padding: 4rem 0;
     background-color: #f0f0f0;
     text-align: center;
+    display: flex; /* Center the entire section */
+    justify-content: center;
   }
   
   .movableImagesGrid {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    gap: 2rem; /* Consistent spacing between items */
+    justify-content: center; /* Centers the content within the grid */
     align-items: center;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 90%; /* Adjust width as needed */
+    max-width: 1200px; /* Optional: limits the grid's width for better alignment */
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    margin: 0 auto; /* Center the grid horizontally within the section */
   }
+  
   
   .movableImageWrapper {
     width: 100%;
