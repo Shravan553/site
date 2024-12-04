@@ -10,13 +10,10 @@ import Scroll from '@/app/Scroll/Scroll';
 
 const Garlic = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when component mounts
+
   }, []);
 
-  // Function to scroll to the top of the page
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+
 
   return (
     <div className={styles.recipePageContainer1}>

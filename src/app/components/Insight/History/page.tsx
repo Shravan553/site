@@ -13,7 +13,7 @@ import Scroll from '@/app/Scroll/Scroll';
 
 const History = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+
   }, []);
 
   // Define images directly in the code

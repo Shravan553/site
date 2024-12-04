@@ -10,13 +10,11 @@ import Scroll from '@/app/Scroll/Scroll';
 const skin = '/assets/mentalhealth.png';
 const imune2 = '/assets/imune2.jpg';
 
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+
 
 const Imune = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when component mounts
+
   }, []);
 
   return (

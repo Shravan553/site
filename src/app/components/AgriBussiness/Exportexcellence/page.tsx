@@ -1,7 +1,7 @@
 "use client";
 
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+
 import Footer from '../../../Footer/Footer';
 import Nav from '../../../Navbar/NavbarTYP';
 import styles from './Export.module.css';

@@ -9,12 +9,12 @@ import Scroll from '@/app/Scroll/Scroll';
 
 // Scroll to top function
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+ 
 };
 
 const Digestive = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when component mounts
+
   }, []);
 
   return (

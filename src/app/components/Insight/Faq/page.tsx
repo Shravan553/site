@@ -12,7 +12,7 @@ const FAQ = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+
   }, []);
 
   useEffect(() => {
@@ -54,9 +54,7 @@ const FAQ = () => {
     setActiveQuestion(activeQuestion === index ? null : index);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+
 
   const renderFAQItem = (index: number, question: string, answer: string) => (
     <div className={styles.faqItem} key={index}>

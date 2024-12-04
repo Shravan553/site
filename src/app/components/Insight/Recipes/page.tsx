@@ -7,10 +7,11 @@ import styles from './PotatoRecipes.module.css'; // Importing CSS module for sty
 import Navbar from '../../../Navbar/NavbarTYP';
 import Footer from '../../../Footer/Footer';
 import Image from 'next/image'; // Import Image from next/image for optimization
+import Scroll from '@/app/Scroll/Scroll';
 
 const PotatoRecipes: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+
   }, []);
 
   // Define images directly in the code
@@ -32,10 +33,6 @@ const PotatoRecipes: React.FC = () => {
     { src: Gimage18, title: 'Potato Garlic Dish', route: '/components/Insight/Recipes/Food/Gar', description: "Flavorful potato garlic dish with rich aromas." }
   ];
 
-  // Define the scrollToTop function
-  const scrollToTop: React.MouseEventHandler<HTMLButtonElement> = (event) => {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <section className={styles.recipesSection}>
@@ -98,9 +95,7 @@ const PotatoRecipes: React.FC = () => {
           </MDBCol>
         ))}
       </MDBRow>
-      <button onClick={scrollToTop} className={styles.scrollToTop}>
-        Scroll to Top
-      </button>
+  <Scroll/>
       <Footer />
     </section>
   );

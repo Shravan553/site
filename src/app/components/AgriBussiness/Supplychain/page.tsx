@@ -13,13 +13,9 @@ import Scroll from '@/app/Scroll/Scroll';
 
 const SupplyChain: React.FC = () => {
   useEffect(() => {
-    // Scroll to top when the component mounts
-    window.scrollTo(0, 0);
+
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <div className={styles.supplyChainWrapper}>

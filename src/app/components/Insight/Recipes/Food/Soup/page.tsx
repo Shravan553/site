@@ -9,13 +9,10 @@ import Footer from '../../../../../Footer/Footer';
 import Link from 'next/link';
 import Scroll from '@/app/Scroll/Scroll';
 
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
 
 const Soup = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+
   }, []);
 
   return (

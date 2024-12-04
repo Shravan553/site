@@ -27,9 +27,6 @@ const products: Product[] = [
   { name: 'Aloo Tikki', image: '/assets/tikki.jpg', description: 'Traditional, spiced aloo tikkis.' },
   { name: 'Veg Burger Patty', image: '/assets/veg.jpg', description: 'Juicy veg patties, perfect for burgers.' },
 ];
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 
 const Frozenproducts = () => {
   return (

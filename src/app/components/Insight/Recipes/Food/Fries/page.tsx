@@ -12,7 +12,7 @@ import Scroll from '@/app/Scroll/Scroll';
 
 const Fries: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when component mounts
+ 
   }, []);
 
   // Define images and video directly in code
@@ -24,10 +24,6 @@ const Fries: React.FC = () => {
   const ketchupImage = '/assets/ket.png';
   const mayoImage = '/assets/mo.png';
 
-  // Function to scroll to top of the page
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <div className={styles.frirecipePageContainer}>
