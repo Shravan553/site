@@ -9,7 +9,6 @@ import Footer from '../../../Footer/Footer';
 import Image from "next/image";  // Import Image component
 
 import NavbarTYP1 from '../../../Navbar/NavbarTYP';
-import Scroll from '@/app/Scroll/Scroll';
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -149,7 +148,7 @@ const Coldstorage: React.FC = () => {
             This process ensures that the potatoes remain fresh, retain their nutritional value, and meet market demands year-round.
           </p>
         </div>
-<Scroll/>
+
         {/* Footer Section */}
         <Footer />
       </div>

@@ -7,7 +7,6 @@ import styles from './Frozenproducts.module.css'; // Assuming you are using CSS 
 import Footer from '../../../Footer/Footer';
 import Image from 'next/image';
 import NavbarTYP from "../../../Navbar/NavbarTYP"
-import Scroll from '@/app/Scroll/Scroll';
 
 // Defining the product type
 interface Product {
@@ -87,7 +86,7 @@ const Frozenproducts = () => {
           </div>
         ))}
       </div>
-   <Scroll/>
+
       <Footer />
     </div>
   );

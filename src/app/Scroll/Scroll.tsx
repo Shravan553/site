@@ -90,10 +90,12 @@ const Scroll: React.FC = () => {
           >
             <button style={whatsappButtonStyle}>
             <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" // WhatsApp SVG icon
-                alt="WhatsApp"
-                style={{ width: '20px', height: '20px', ...iconStyle }}
-                />
+  src="/assets/WhatsApp.svg"
+  alt="WhatsApp"
+  width={20}
+  height={20}
+  style={{ width: '20px', height: '20px', ...iconStyle }}
+/>
                 Need Help? Chat with Us
               </button>
           </a>

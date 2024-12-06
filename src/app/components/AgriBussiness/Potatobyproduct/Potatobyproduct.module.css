@@ -82,6 +82,36 @@
   .byprogrid {
     grid-template-columns: repeat(2, 1fr); /* 2 cards per row for mobile view */
   }
+  .boldText {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px; /* Minimal padding to prevent text touching edges */
+    margin: 0; /* Remove any horizontal margins */
+    box-sizing: border-box;
+  }
+
+  .description {
+    font-size: 16px;
+    word-spacing: 3px;
+    padding-top: 15px;
+    text-align: justify; /* Changed from center to justify */
+    margin: 10px 0;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 10px; /* Minimal padding to prevent text touching edges */
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    hyphens: auto; /* Optional: helps with text justification */
+    text-justify: inter-word; /* Provides better justification */
+  }
+  /* If there's a parent container, ensure it doesn't restrict width */
+  .pageContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 
@@ -201,6 +231,37 @@ word-spacing: 5px;
 @media (max-width: 768px) {
   .whyChooseTitle {
     font-size: 2rem;
+  }
+  
+  .boldText {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px; /* Minimal padding to prevent text touching edges */
+    margin: 0; /* Remove any horizontal margins */
+    box-sizing: border-box;
+  }
+  .description {
+    font-size: 16px;
+    word-spacing: 3px;
+    padding-top: 15px;
+    text-align: justify; /* Changed from center to justify */
+    margin: 10px 0;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 10px; /* Minimal padding to prevent text touching edges */
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    hyphens: auto; /* Optional: helps with text justification */
+    text-justify: inter-word; /* Provides better justification */
+  }
+
+  /* If there's a parent container, ensure it doesn't restrict width */
+  .pageContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .whyChooseDescription {
@@ -331,6 +392,7 @@ word-spacing: 5px;
   margin-bottom: 1rem;
 }
 
+
 .productDescription {
   font-size: 1rem;
   color: #555;
@@ -369,6 +431,38 @@ word-spacing: 5px;
 
   .contentDescription {
     font-size: 1rem;
+  }
+  
+  .boldText {
+    font-size: 1.4rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px; /* Minimal padding to prevent text touching edges */
+    margin: 0; /* Remove any horizontal margins */
+    box-sizing: border-box;
+  }
+
+  .description {
+    font-size: 16px;
+    word-spacing: 3px;
+    padding-top: 15px;
+    text-align: justify; /* Changed from center to justify */
+    margin: 10px 0;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 10px; /* Minimal padding to prevent text touching edges */
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    hyphens: auto; /* Optional: helps with text justification */
+    text-justify: inter-word; /* Provides better justification */
+  }
+
+  /* If there's a parent container, ensure it doesn't restrict width */
+  .pageContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .productsGallery {

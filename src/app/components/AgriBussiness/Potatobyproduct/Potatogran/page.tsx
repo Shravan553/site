@@ -10,12 +10,11 @@ import Footer from '../../../../Footer/Footer';
 import Nav from '../../../../Navbar/NavbarTYP';
 
 import Image from 'next/image';
-import Scroll from '@/app/Scroll/Scroll';
 
 const Potatoflour: React.FC = () => {
   useEffect(() => {
     // Scroll to top when component mounts
-  
+    window.scrollTo(0, 0);
   }, []);
 
 
@@ -153,7 +152,7 @@ POTATO BY PRODUCTS , like potato flour, have revolutionized my baking. It gives 
         
       </div>
 
-     <Scroll/>
+     
       {/* Footer Section */}
       <Footer />
     </section>

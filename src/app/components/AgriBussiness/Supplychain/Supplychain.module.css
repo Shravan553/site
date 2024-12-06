@@ -342,8 +342,28 @@
     margin-bottom: 8px; /* Space between bullet points */
   }
   
+  /* Responsive design for mobile */
+@media (max-width: 768px) {
+  .contactButton {
+      bottom: 20%; /* Adjusts the position for smaller screens */
+      padding: 10px 20px; /* Smaller padding for better fit */
+      font-size: 18px; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .contactButton {
+      bottom: 15%; /* Adjust further for very small screens */
+      padding: 8px 16px;
+      font-size: 16px;
+  }
+}
+
   /* General Mobile Adjustments */
   @media (max-width: 768px) {
+
+
+   
     .supplyChainMeaning {
       padding: 20px 10px;
     }

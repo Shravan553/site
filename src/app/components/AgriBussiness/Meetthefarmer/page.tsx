@@ -8,13 +8,11 @@ import Footer from "../../../Footer/Footer";
 import NavbarTYP from "../../../Navbar/NavbarTYP";
 import Image from 'next/image'; // Importing Image from next/image
 import styles from './Meetthefarmer.module.css';
-import Scroll from '@/app/Scroll/Scroll';
 
 const Meetfarmer: React.FC = () => {
   useEffect(() => {
     // Scroll to the top when the component mounts
   }, []);
-
 
   return (
     <div className={styles.supplyChainWrapper}>
@@ -96,7 +94,6 @@ const Meetfarmer: React.FC = () => {
         </div>
       </section>
 
-  <Scroll/>
       <Footer />
     </div>
   );
