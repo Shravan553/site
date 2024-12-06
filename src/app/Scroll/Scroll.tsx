@@ -1,18 +1,13 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { FaWhatsapp } from 'react-icons/fa'; // Import Font Awesome WhatsApp icon
 
 const Scroll: React.FC = () => {
-  const [showButton, setShowButton] = useState<boolean>(false);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     const handleScroll = (): void => {
-      if (window.scrollY > 200) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
+      setShowButton(window.scrollY > 200);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -32,7 +27,6 @@ const Scroll: React.FC = () => {
     right: '30px',
     backgroundColor: '#04D939',
     color: 'white',
-    width: 'auto',
     border: 'none',
     borderRadius: '5px',
     padding: '10px 15px',
@@ -41,13 +35,9 @@ const Scroll: React.FC = () => {
     transition: 'background-color 0.3s ease',
   };
 
-  const buttonHoverStyle: React.CSSProperties = {
-    backgroundColor: '#03C829',
-  };
-
   const whatsappButtonStyle: React.CSSProperties = {
     position: 'fixed',
-    bottom: '90px', // Adjusted to position above the Scroll button
+    bottom: '90px', // Positioned above the Scroll button
     right: '30px',
     backgroundColor: '#25D366',
     color: 'white',
@@ -62,43 +52,43 @@ const Scroll: React.FC = () => {
   };
 
   const iconStyle: React.CSSProperties = {
-    marginRight: '8px', // Space between icon and text
+    marginRight: '8px', // Space between the icon and text
   };
 
   return (
     <>
       {showButton && (
         <>
+          {/* Scroll to Top Button */}
           <button
-            onClick={scrollToTop}
             style={buttonStyle}
-            onMouseEnter={(e) => {
-              (e.target as HTMLButtonElement).style.backgroundColor = buttonHoverStyle.backgroundColor!;
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLButtonElement).style.backgroundColor = buttonStyle.backgroundColor!;
-            }}
+            onMouseEnter={(e) =>
+              (e.target as HTMLButtonElement).style.backgroundColor = '#03C829'
+            }
+            onMouseLeave={(e) =>
+              (e.target as HTMLButtonElement).style.backgroundColor = '#04D939'
+            }
+            onClick={scrollToTop}
           >
             Scroll to Top
           </button>
+
           {/* WhatsApp Chat Button */}
-          <a
-            href="https://wa.me/9353237885?text=Hello,%20I%20need%20help!" // Your phone number added here
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: 'none' }}
+          <button
+            style={whatsappButtonStyle}
+            onMouseEnter={(e) =>
+              (e.target as HTMLButtonElement).style.backgroundColor = '#1DA855'
+            }
+            onMouseLeave={(e) =>
+              (e.target as HTMLButtonElement).style.backgroundColor = '#25D366'
+            }
+            onClick={() => {
+              window.open('https://wa.me/1234567890', '_blank'); // Replace with your WhatsApp number
+            }}
           >
-            <button style={whatsappButtonStyle}>
-            <Image
-  src="/WhatsApp.svg"
-  alt="WhatsApp"
-  width={20}
-  height={20}
-  style={{ width: '20px', height: '20px', ...iconStyle }}
-/>
-                Need Help? Chat with Us
-              </button>
-          </a>
+            <FaWhatsapp style={iconStyle} />
+            Need Help? Chat with Us
+          </button>
         </>
       )}
     </>
